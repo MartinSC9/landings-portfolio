@@ -1327,6 +1327,131 @@
       color: var(--gold);
     }
 
+    /* ===== TOAST NOTIFICATION ===== */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--gold);
+      color: var(--black);
+      padding: 1.2rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 10000;
+      transform: translateY(120%);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ===== PROJECT MODAL ===== */
+    .project-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .project-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .project-modal {
+      background: var(--white);
+      max-width: 550px;
+      width: 90%;
+      padding: 3rem;
+      position: relative;
+      transform: translateY(30px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .project-modal-overlay.active .project-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .project-modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--gray-200);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      font-size: 1.2rem;
+      color: var(--gray-700);
+    }
+
+    .project-modal-close:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .project-modal-category {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .project-modal-name {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: var(--black);
+    }
+
+    .project-modal-description {
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .project-modal-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      transition: color var(--transition);
+    }
+
+    .project-modal-cta:hover {
+      color: var(--gold-dark);
+    }
+
     /* ===== PAGE LOADER ===== */
     .page-loader {
       position: fixed;
@@ -1550,7 +1675,7 @@
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo">AR<span>CO</span></a>
+      <a href="#hero" class="nav-logo">AR<span>CO</span></a>
       <ul class="nav-links">
         <li><a href="#about">Estudio</a></li>
         <li><a href="#services">Servicios</a></li>
@@ -1906,7 +2031,7 @@
           </div>
           <div class="contact-map" data-aos="fade-up" data-aos-delay="500"></div>
         </div>
-        <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
+        <form class="contact-form" data-aos="fade-left" data-aos-delay="200">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nombre</label>
@@ -1931,10 +2056,24 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </section>
+
+  <!-- Project Modal -->
+  <div class="project-modal-overlay" id="projectModal">
+    <div class="project-modal">
+      <button class="project-modal-close" id="modalClose">&times;</button>
+      <span class="project-modal-category" id="modalCategory"></span>
+      <h3 class="project-modal-name" id="modalName"></h3>
+      <p class="project-modal-description" id="modalDescription"></p>
+      <button class="project-modal-cta" id="modalCta">Consultar sobre este proyecto &rarr;</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1962,8 +2101,10 @@
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2026 ARCO Estudio. Todos los derechos reservados.</p>
         <div class="footer-links">
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos de uso</a>
+          <a href="#about">Estudio</a>
+          <a href="#services">Servicios</a>
+          <a href="#portfolio">Proyectos</a>
+          <a href="#contact">Contacto</a>
         </div>
       </div>
     </div>
@@ -2166,17 +2307,91 @@
       });
     });
 
-    // ===== FORM SUBMIT (visual feedback) =====
-    document.querySelector('.form-submit .btn').addEventListener('click', function(e) {
-      e.preventDefault();
-      const btn = this;
-      const originalText = btn.innerHTML;
-      btn.innerHTML = 'Enviado &check;';
-      btn.style.background = '#2d7a4f';
+    // ===== TOAST HELPER =====
+    function showToast(message, duration = 4000) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
       setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-      }, 2500);
+        toast.classList.remove('show');
+      }, duration);
+    }
+
+    // ===== CONTACT FORM SUBMIT =====
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      contactForm.reset();
+      showToast('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+    });
+
+    // ===== SERVICE CARDS - Click to scroll to contact =====
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const contact = document.getElementById('contact');
+        if (contact) {
+          const offset = 80;
+          const top = contact.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===== PORTFOLIO MODAL =====
+    const projectDescriptions = {
+      'Casa Serrana': 'Una residencia de montaña que integra materiales nobles con vistas panorámicas. Diseñada para fusionarse con el paisaje serrano, combina piedra, madera y grandes paños de vidrio que enmarcan la naturaleza circundante.',
+      'Hotel Bosque Alto': 'Un hotel boutique inmerso en el bosque que redefine la hospitalidad de lujo. Cada habitación fue pensada como un refugio íntimo con máximo confort y mínimo impacto ambiental.',
+      'Loft Palermo': 'Transformación completa de un espacio industrial en un loft contemporáneo que conserva su carácter original. Doble altura, hormigón visto y una paleta neutra que dialoga con obras de arte seleccionadas.',
+      'Residencia del Lago': 'Villa de diseño minimalista a orillas del lago, donde la arquitectura se convierte en un marco para el paisaje. Líneas puras y materiales naturales crean una experiencia de vida excepcional.',
+      'Casona Histórica': 'Restauración integral de una casona de principios del siglo XX. Se preservó la fachada patrimonial mientras el interior fue reimaginado con un lenguaje arquitectónico contemporáneo.',
+      'Vinoteca Mendoza': 'Espacio comercial que celebra la cultura del vino con un diseño envolvente. Muros de ladrillo, iluminación cálida y mobiliario a medida crean una atmósfera única para la degustación.'
+    };
+
+    const modalOverlay = document.getElementById('projectModal');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalName = document.getElementById('modalName');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalClose = document.getElementById('modalClose');
+    const modalCta = document.getElementById('modalCta');
+
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const name = item.querySelector('.portfolio-name').textContent;
+        const category = item.querySelector('.portfolio-category').textContent;
+        modalCategory.textContent = category;
+        modalName.textContent = name;
+        modalDescription.textContent = projectDescriptions[name] || 'Proyecto de ' + category.toLowerCase() + ' diseñado por ARCO Estudio con atención al detalle y compromiso con la excelencia arquitectónica.';
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+    });
+
+    modalCta.addEventListener('click', () => {
+      closeModal();
+      setTimeout(() => {
+        const contact = document.getElementById('contact');
+        if (contact) {
+          const offset = 80;
+          const top = contact.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 300);
     });
   </script>
 </body>

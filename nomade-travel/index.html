@@ -874,6 +874,88 @@
       letter-spacing: 0.5px;
     }
 
+    /* ========== LIGHTBOX ========== */
+    .lightbox-overlay {
+      display: none; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; z-index: 2000;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(10px);
+      align-items: center; justify-content: center;
+      flex-direction: column; gap: 20px;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .lightbox-overlay.active { display: flex; opacity: 1; }
+    .lightbox-image {
+      max-width: 85vw; max-height: 75vh;
+      border-radius: 12px; object-fit: cover;
+    }
+    .lightbox-caption {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--white);
+    }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 24px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white); font-size: 1.5rem;
+      cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: all 0.3s;
+    }
+    .lightbox-close:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    /* ========== CAROUSEL NAV ARROWS ========== */
+    .carousel-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: 1.2rem;
+      cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: all 0.3s; z-index: 5;
+    }
+    .carousel-nav:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+    .carousel-prev { left: -56px; }
+    .carousel-next { right: -56px; }
+    @media (max-width: 968px) {
+      .carousel-prev { left: -10px; }
+      .carousel-next { right: -10px; }
+    }
+
+    /* ========== TIMELINE RESERVAR BTN ========== */
+    .btn-reservar {
+      display: inline-block;
+      padding: 10px 24px; border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem; font-weight: 700;
+      background: var(--orange); border: none;
+      color: var(--white); cursor: pointer;
+      transition: all 0.3s; white-space: nowrap;
+    }
+    .btn-reservar:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255,107,53,0.4);
+    }
+
+    /* ========== CTA SUCCESS ========== */
+    .cta-success {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      color: #28a745; margin-top: 16px;
+      display: none;
+    }
+    .cta-success.show { display: block; }
+
     /* ========== DIAGONAL CUT ========== */
     .diagonal-top {
       position: relative;
@@ -936,7 +1018,7 @@
         <a href="#paquetes">Paquetes</a>
         <a href="#salidas">Salidas</a>
         <a href="#contacto">Contacto</a>
-        <a href="#" class="nav-cta">Reservar Aventura</a>
+        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20reservar%20una%20aventura%20con%20N%C3%B3made%20Travel" target="_blank" rel="noopener" class="nav-cta">Reservar Aventura</a>
       </div>
       <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -946,12 +1028,12 @@
 
   <!-- Mobile overlay -->
   <div class="mobile-overlay" id="mobileMenu">
-    <a href="#destinos" onclick="toggleMenu()">Destinos</a>
-    <a href="#aventuras" onclick="toggleMenu()">Aventuras</a>
-    <a href="#paquetes" onclick="toggleMenu()">Paquetes</a>
-    <a href="#salidas" onclick="toggleMenu()">Salidas</a>
-    <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-    <a href="#" class="nav-cta" style="margin-top:20px;" onclick="toggleMenu()">Reservar Aventura</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#aventuras">Aventuras</a>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#salidas">Salidas</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20reservar%20una%20aventura%20con%20N%C3%B3made%20Travel" target="_blank" rel="noopener" class="nav-cta" style="margin-top:20px;" onclick="toggleMenu()">Reservar Aventura</a>
   </div>
 
   <!-- HERO -->
@@ -1301,6 +1383,8 @@
         <h2 data-aos="fade-up" data-aos-delay="100">Lo que dicen nuestros viajeros</h2>
       </div>
       <div class="carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+        <button class="carousel-nav carousel-prev" onclick="prevSlide()" aria-label="Anterior">&larr;</button>
+        <button class="carousel-nav carousel-next" onclick="nextSlide()" aria-label="Siguiente">&rarr;</button>
         <div class="carousel-track" id="carouselTrack">
           <div class="testimonial-slide">
             <div class="testimonial-card">
@@ -1390,7 +1474,10 @@
               <div class="timeline-dest">Torres del Paine</div>
               <div class="timeline-spots">4 lugares disponibles <span class="urgency-badge" style="margin-left:8px;">¡Últimos lugares!</span></div>
             </div>
-            <div class="timeline-price">$680.000</div>
+            <div style="text-align:right">
+              <div class="timeline-price">$680.000</div>
+              <button class="btn-reservar" style="margin-top:10px" data-trip="Torres del Paine" data-date="12 - 18 Abril 2026">Reservar</button>
+            </div>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
@@ -1401,7 +1488,10 @@
               <div class="timeline-dest">Ruta de los 7 Lagos</div>
               <div class="timeline-spots">7 lugares disponibles</div>
             </div>
-            <div class="timeline-price">$450.000</div>
+            <div style="text-align:right">
+              <div class="timeline-price">$450.000</div>
+              <button class="btn-reservar" style="margin-top:10px" data-trip="Ruta de los 7 Lagos" data-date="25 - 29 Abril 2026">Reservar</button>
+            </div>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
@@ -1412,7 +1502,10 @@
               <div class="timeline-dest">Quebrada de Humahuaca</div>
               <div class="timeline-spots">2 lugares disponibles <span class="urgency-badge" style="margin-left:8px;">¡Últimos lugares!</span></div>
             </div>
-            <div class="timeline-price">$320.000</div>
+            <div style="text-align:right">
+              <div class="timeline-price">$320.000</div>
+              <button class="btn-reservar" style="margin-top:10px" data-trip="Quebrada de Humahuaca" data-date="5 - 8 Mayo 2026">Reservar</button>
+            </div>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
@@ -1423,7 +1516,10 @@
               <div class="timeline-dest">Ushuaia Fin del Mundo</div>
               <div class="timeline-spots">6 lugares disponibles</div>
             </div>
-            <div class="timeline-price">$520.000</div>
+            <div style="text-align:right">
+              <div class="timeline-price">$520.000</div>
+              <button class="btn-reservar" style="margin-top:10px" data-trip="Ushuaia Fin del Mundo" data-date="15 - 20 Mayo 2026">Reservar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -1473,12 +1569,20 @@
     <div class="cta-content">
       <h2 data-aos="fade-up">Tu próxima aventura <span class="gradient-text">empieza acá</span></h2>
       <p data-aos="fade-up" data-aos-delay="100">Dejanos tu email y te enviamos las mejores ofertas y próximas salidas</p>
-      <form class="cta-form" data-aos="fade-up" data-aos-delay="200" onsubmit="event.preventDefault()">
-        <input type="email" placeholder="tu@email.com">
+      <form class="cta-form" id="ctaForm" data-aos="fade-up" data-aos-delay="200">
+        <input type="email" placeholder="tu@email.com" required>
         <button type="submit">Quiero Info</button>
       </form>
+      <p class="cta-success" id="ctaSuccess">¡Listo! Te enviaremos info sobre próximas aventuras.</p>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img class="lightbox-image" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -1494,16 +1598,16 @@
           </a>
           <p>Creamos experiencias de aventura únicas en los destinos más increíbles de Latinoamérica desde 2018.</p>
           <div class="footer-socials">
-            <a href="#" aria-label="Instagram">
+            <a href="https://instagram.com/nomadetravel" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
             </a>
-            <a href="#" aria-label="Facebook">
+            <a href="https://facebook.com/nomadetravel" target="_blank" rel="noopener" aria-label="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#" aria-label="YouTube">
+            <a href="https://youtube.com/@nomadetravel" target="_blank" rel="noopener" aria-label="YouTube">
               <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z" fill="none" stroke="white" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="https://twitter.com/nomadetravel" target="_blank" rel="noopener" aria-label="Twitter">
               <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" fill="none" stroke="white" stroke-width="2"/></svg>
             </a>
           </div>
@@ -1511,31 +1615,31 @@
         <div class="footer-col">
           <h4>Destinos</h4>
           <ul>
-            <li><a href="#">Patagonia</a></li>
-            <li><a href="#">Salar de Uyuni</a></li>
-            <li><a href="#">Machu Picchu</a></li>
-            <li><a href="#">Mendoza</a></li>
-            <li><a href="#">Ushuaia</a></li>
+            <li><a href="#destinos">Patagonia</a></li>
+            <li><a href="#destinos">Salar de Uyuni</a></li>
+            <li><a href="#destinos">Machu Picchu</a></li>
+            <li><a href="#destinos">Mendoza</a></li>
+            <li><a href="#destinos">Ushuaia</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Aventuras</h4>
           <ul>
-            <li><a href="#">Trekking</a></li>
-            <li><a href="#">Kayak</a></li>
-            <li><a href="#">Montañismo</a></li>
-            <li><a href="#">Buceo</a></li>
-            <li><a href="#">Glamping</a></li>
+            <li><a href="#aventuras">Trekking</a></li>
+            <li><a href="#aventuras">Kayak</a></li>
+            <li><a href="#aventuras">Montañismo</a></li>
+            <li><a href="#aventuras">Buceo</a></li>
+            <li><a href="#aventuras">Glamping</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Equipo</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#destinos">Nosotros</a></li>
+            <li><a href="#salidas">Equipo</a></li>
+            <li><a href="#paquetes">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contacto">Trabaja con nosotros</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1563,6 +1667,10 @@
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // ===== CONSTANTS =====
+    var WA_PHONE = '5491112345678';
+    var NAVBAR_HEIGHT = 80;
+
     // ===== AOS Init =====
     AOS.init({
       duration: 800,
@@ -1571,9 +1679,24 @@
       offset: 80
     });
 
+    // ===== Smooth Scroll Helper =====
+    function smoothScrollTo(targetId) {
+      var el = document.querySelector(targetId);
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }
+
+    // ===== WhatsApp Helper =====
+    function openWhatsApp(message) {
+      var url = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+
     // ===== Navbar Scroll =====
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
       } else {
@@ -1581,30 +1704,184 @@
       }
     });
 
+    // ===== Smooth Scroll for All Anchor Links =====
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (link) {
+        var href = link.getAttribute('href');
+        if (href && href.length > 1) {
+          e.preventDefault();
+          smoothScrollTo(href);
+        }
+      }
+    });
+
     // ===== Mobile Menu =====
     function toggleMenu() {
-      const hamburger = document.getElementById('hamburger');
-      const menu = document.getElementById('mobileMenu');
+      var hamburger = document.getElementById('hamburger');
+      var menu = document.getElementById('mobileMenu');
       hamburger.classList.toggle('active');
       menu.classList.toggle('active');
       document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
     }
 
+    // Close mobile menu on link click (already has onclick="toggleMenu()" in HTML, but also handle anchor scroll)
+    document.querySelectorAll('.mobile-overlay a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var href = link.getAttribute('href');
+        if (href && href.length > 1) {
+          e.preventDefault();
+          toggleMenu();
+          setTimeout(function() { smoothScrollTo(href); }, 300);
+        }
+      });
+    });
+
+    // ===== Hero Search Button -> Scroll to Packages =====
+    document.querySelector('.search-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      smoothScrollTo('#paquetes');
+    });
+
+    // ===== Destination Cards -> WhatsApp =====
+    document.querySelectorAll('.dest-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var destName = card.querySelector('h3').textContent;
+        openWhatsApp('Hola! Me interesa el destino: ' + destName);
+      });
+    });
+
+    // ===== Adventure Type Cards -> Scroll to Packages =====
+    document.querySelectorAll('.type-card').forEach(function(card) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function() {
+        smoothScrollTo('#paquetes');
+      });
+    });
+
+    // ===== Package "Ver Más" Buttons -> WhatsApp =====
+    document.querySelectorAll('.btn-ver-mas').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var card = btn.closest('.pkg-card');
+        var pkgName = card.querySelector('.pkg-body h3').textContent;
+        var pkgPrice = card.querySelector('.pkg-price').childNodes[0].textContent.trim();
+        openWhatsApp('Hola! Quiero info sobre el paquete: ' + pkgName + ' - ' + pkgPrice);
+      });
+    });
+
+    // ===== Carousel =====
+    var currentSlide = 0;
+    var track = document.getElementById('carouselTrack');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var totalSlides = dots.length;
+    var autoSlideInterval;
+
+    function goToSlide(index) {
+      currentSlide = index;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+      resetAutoSlide();
+    }
+
+    function nextSlide() {
+      goToSlide((currentSlide + 1) % totalSlides);
+    }
+
+    function prevSlide() {
+      goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(function() {
+        goToSlide((currentSlide + 1) % totalSlides);
+      }, 5000);
+    }
+
+    resetAutoSlide();
+
+    // ===== Upcoming Trips "Reservar" Buttons -> WhatsApp =====
+    document.querySelectorAll('.btn-reservar').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var tripName = btn.getAttribute('data-trip');
+        var tripDate = btn.getAttribute('data-date');
+        openWhatsApp('Hola! Quiero reservar: ' + tripName + ' - Salida: ' + tripDate);
+      });
+    });
+
+    // ===== Gallery Lightbox =====
+    var galleryImages = [
+      { src: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=90', caption: 'Glaciar Perito Moreno' },
+      { src: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=90', caption: 'Atardecer en Uyuni' },
+      { src: 'https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=1200&q=90', caption: 'Selva Misionera' },
+      { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=90', caption: 'Cerro Fitz Roy' },
+      { src: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=1200&q=90', caption: 'Viñedos de Mendoza' },
+      { src: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=1200&q=90', caption: 'Quebrada de las Flechas' },
+      { src: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=90', caption: 'Canal de Beagle' },
+      { src: 'https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1200&q=90', caption: 'Lago Nahuel Huapi' }
+    ];
+
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxCaption = document.getElementById('lightboxCaption');
+    var lightboxClose = document.getElementById('lightboxClose');
+    var galleryDragged = false;
+
+    document.querySelectorAll('.gallery-item').forEach(function(item, index) {
+      item.style.cursor = 'pointer';
+      item.addEventListener('mousedown', function() { galleryDragged = false; });
+      item.addEventListener('mousemove', function() { galleryDragged = true; });
+      item.addEventListener('click', function() {
+        if (galleryDragged) return;
+        lightboxImg.src = galleryImages[index].src;
+        lightboxImg.alt = galleryImages[index].caption;
+        lightboxCaption.textContent = galleryImages[index].caption;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // ===== CTA Form Submit =====
+    var ctaForm = document.getElementById('ctaForm');
+    var ctaSuccess = document.getElementById('ctaSuccess');
+    ctaForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      ctaSuccess.classList.add('show');
+      ctaForm.reset();
+      setTimeout(function() {
+        ctaSuccess.classList.remove('show');
+      }, 5000);
+    });
+
     // ===== Counter Animation =====
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          const counters = entry.target.querySelectorAll('.counter-num');
-          counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
-            const start = performance.now();
-            const animate = (now) => {
-              const elapsed = now - start;
-              const progress = Math.min(elapsed / duration, 1);
-              // Ease out cubic
-              const eased = 1 - Math.pow(1 - progress, 3);
-              const current = Math.floor(eased * target);
+          var counters = entry.target.querySelectorAll('.counter-num');
+          counters.forEach(function(counter) {
+            var target = parseInt(counter.getAttribute('data-target'));
+            var duration = 2000;
+            var start = performance.now();
+            var animate = function(now) {
+              var elapsed = now - start;
+              var progress = Math.min(elapsed / duration, 1);
+              var eased = 1 - Math.pow(1 - progress, 3);
+              var current = Math.floor(eased * target);
               counter.textContent = current.toLocaleString('es-AR') + (target > 100 ? '+' : target === 98 ? '%' : '');
               if (progress < 1) requestAnimationFrame(animate);
               else counter.textContent = target.toLocaleString('es-AR') + (target > 100 ? '+' : target === 98 ? '%' : '+');
@@ -1616,84 +1893,68 @@
       });
     }, { threshold: 0.3 });
 
-    const counterSection = document.querySelector('.counter-grid');
+    var counterSection = document.querySelector('.counter-grid');
     if (counterSection) counterObserver.observe(counterSection);
 
-    // ===== Carousel =====
-    let currentSlide = 0;
-    const track = document.getElementById('carouselTrack');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const totalSlides = dots.length;
-
-    function goToSlide(index) {
-      currentSlide = index;
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === index));
-    }
-
-    setInterval(() => {
-      goToSlide((currentSlide + 1) % totalSlides);
-    }, 5000);
-
     // ===== Gallery Drag Scroll =====
-    const gallery = document.getElementById('galleryScroll');
-    let isDown = false, startX, scrollLeft;
-    gallery.addEventListener('mousedown', (e) => {
+    var gallery = document.getElementById('galleryScroll');
+    var isDown = false, startX, scrollLeft;
+    gallery.addEventListener('mousedown', function(e) {
       isDown = true;
       gallery.style.cursor = 'grabbing';
       startX = e.pageX - gallery.offsetLeft;
       scrollLeft = gallery.scrollLeft;
     });
-    gallery.addEventListener('mouseleave', () => { isDown = false; gallery.style.cursor = 'grab'; });
-    gallery.addEventListener('mouseup', () => { isDown = false; gallery.style.cursor = 'grab'; });
-    gallery.addEventListener('mousemove', (e) => {
+    gallery.addEventListener('mouseleave', function() { isDown = false; gallery.style.cursor = 'grab'; });
+    gallery.addEventListener('mouseup', function() { isDown = false; gallery.style.cursor = 'grab'; });
+    gallery.addEventListener('mousemove', function(e) {
       if (!isDown) return;
       e.preventDefault();
-      const x = e.pageX - gallery.offsetLeft;
-      const walk = (x - startX) * 2;
+      var x = e.pageX - gallery.offsetLeft;
+      var walk = (x - startX) * 2;
       gallery.scrollLeft = scrollLeft - walk;
     });
 
     // ===== 3D Tilt on Destination Cards =====
-    document.querySelectorAll('.dest-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px)`;
+    document.querySelectorAll('.dest-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var rotateX = ((y - centerY) / centerY) * -5;
+        var rotateY = ((x - centerX) / centerX) * 5;
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-12px)';
       });
-      card.addEventListener('mouseleave', () => {
+      card.addEventListener('mouseleave', function() {
         card.style.transform = '';
       });
     });
 
     // ===== 3D Tilt on Package Cards =====
-    document.querySelectorAll('.pkg-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -4;
-        const rotateY = ((x - centerX) / centerX) * 4;
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    document.querySelectorAll('.pkg-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var rotateX = ((y - centerY) / centerY) * -4;
+        var rotateY = ((x - centerX) / centerX) * 4;
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-10px)';
       });
-      card.addEventListener('mouseleave', () => {
+      card.addEventListener('mouseleave', function() {
         card.style.transform = '';
       });
     });
 
     // ===== Parallax on Scroll =====
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
-      const heroMesh = document.querySelector('.hero-mesh');
+    window.addEventListener('scroll', function() {
+      var scrolled = window.scrollY;
+      var heroMesh = document.querySelector('.hero-mesh');
       if (heroMesh) {
-        heroMesh.style.transform = `translateY(${scrolled * 0.3}px)`;
+        heroMesh.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
       }
     });
   </script>

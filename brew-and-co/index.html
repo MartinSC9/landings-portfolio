@@ -1204,6 +1204,104 @@
             display: block;
             width: 100%;
         }
+
+        /* ============================================
+           LIGHTBOX
+           ============================================ */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+            cursor: pointer;
+        }
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            font-family: 'Lato', sans-serif;
+            transition: transform 0.3s;
+            z-index: 10001;
+        }
+        .lightbox-close:hover { transform: rotate(90deg); }
+        .lightbox-image {
+            max-width: 85vw;
+            max-height: 75vh;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+            cursor: default;
+        }
+        .lightbox-label {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-top: 20px;
+            cursor: default;
+        }
+
+        /* ============================================
+           ORIGIN CARD FLIP
+           ============================================ */
+        .origin-card {
+            cursor: pointer;
+        }
+        .origin-card-bottom .origin-extra {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .origin-card.expanded .origin-extra {
+            max-height: 200px;
+            opacity: 1;
+        }
+        .origin-extra p {
+            padding-top: 12px;
+            border-top: 1px solid rgba(44, 24, 16, 0.1);
+            font-size: 0.85rem !important;
+            color: var(--sage-green) !important;
+            opacity: 1 !important;
+        }
+
+        /* ============================================
+           MENU CARD CLICKABLE
+           ============================================ */
+        .menu-card {
+            cursor: pointer;
+        }
+
+        /* ============================================
+           NEWSLETTER SUCCESS MESSAGE
+           ============================================ */
+        .newsletter-success {
+            color: var(--warm-orange);
+            font-size: 0.9rem;
+            margin-top: 12px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .newsletter-success.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -1229,7 +1327,7 @@
                 <a href="#gallery">Galeria</a>
                 <a href="#testimonials">Opiniones</a>
                 <a href="#location">Ubicacion</a>
-                <a href="#reservar" class="btn btn-primary nav-cta">Reservar Mesa</a>
+                <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20reservar%20una%20mesa%20en%20Brew%20%26%20Co." target="_blank" rel="noopener" class="btn btn-primary nav-cta">Reservar Mesa</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -1279,7 +1377,7 @@
                         Ver Menu
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
-                    <a href="#reservar" class="btn btn-outline">Reservar</a>
+                    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20reservar%20una%20mesa%20en%20Brew%20%26%20Co." target="_blank" rel="noopener" class="btn btn-outline">Reservar</a>
                 </div>
             </div>
         </div>
@@ -1548,6 +1646,9 @@
                             </div>
                             <span>Medio</span>
                         </div>
+                        <div class="origin-extra">
+                            <p>Altitud: 1.700 msnm | Proceso: Lavado | Productor: Finca El Paraiso, Huila | Varietal: Caturra & Castillo | Puntaje SCA: 86</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1571,6 +1672,9 @@
                                 <div class="roast-bar"></div>
                             </div>
                             <span>Claro</span>
+                        </div>
+                        <div class="origin-extra">
+                            <p>Altitud: 1.900 msnm | Proceso: Natural | Productor: Cooperativa Yirgacheffe | Varietal: Heirloom | Puntaje SCA: 89</p>
                         </div>
                     </div>
                 </div>
@@ -1596,6 +1700,9 @@
                             </div>
                             <span>Medio-Oscuro</span>
                         </div>
+                        <div class="origin-extra">
+                            <p>Altitud: 1.100 msnm | Proceso: Pulped Natural | Productor: Fazenda Santa Monica | Varietal: Yellow Bourbon | Puntaje SCA: 84</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1619,6 +1726,9 @@
                                 <div class="roast-bar filled"></div>
                             </div>
                             <span>Oscuro</span>
+                        </div>
+                        <div class="origin-extra">
+                            <p>Altitud: 1.600 msnm | Proceso: Lavado | Productor: Finca La Azotea, Antigua | Varietal: Bourbon & Typica | Puntaje SCA: 87</p>
                         </div>
                     </div>
                 </div>
@@ -1805,7 +1915,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">
+                    <a href="https://maps.google.com/?q=Cafeteria+Buenos+Aires+Argentina" target="_blank" rel="noopener" class="btn btn-primary">
                         Como llegar
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
@@ -1896,16 +2006,16 @@
                     </a>
                     <p>Cafe de especialidad, pasteleria artesanal y momentos inolvidables en el corazon de Cordoba.</p>
                     <div class="footer-socials">
-                        <a href="#" class="footer-social" aria-label="Instagram">
+                        <a href="https://instagram.com/brewandco" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
-                        <a href="#" class="footer-social" aria-label="Facebook">
+                        <a href="https://facebook.com/brewandco" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                         </a>
-                        <a href="#" class="footer-social" aria-label="Twitter">
+                        <a href="https://twitter.com/brewandco" target="_blank" rel="noopener" class="footer-social" aria-label="Twitter">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
                         </a>
-                        <a href="#" class="footer-social" aria-label="WhatsApp">
+                        <a href="https://wa.me/5491112345678" target="_blank" rel="noopener" class="footer-social" aria-label="WhatsApp">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
                         </a>
                     </div>
@@ -1924,21 +2034,22 @@
                 <div>
                     <h5>Servicios</h5>
                     <div class="footer-links">
-                        <a href="#">Reservas</a>
-                        <a href="#">Eventos privados</a>
-                        <a href="#">Catering</a>
-                        <a href="#">Cafe para llevar</a>
-                        <a href="#">Granos x kilo</a>
-                        <a href="#">Gift Cards</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20Brew%20%26%20Co." target="_blank" rel="noopener">Reservas</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20consultar%20por%20eventos%20privados%20en%20Brew%20%26%20Co." target="_blank" rel="noopener">Eventos privados</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20el%20servicio%20de%20catering%20de%20Brew%20%26%20Co." target="_blank" rel="noopener">Catering</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20cafe%20para%20llevar%20de%20Brew%20%26%20Co." target="_blank" rel="noopener">Cafe para llevar</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20comprar%20granos%20por%20kilo%20de%20Brew%20%26%20Co." target="_blank" rel="noopener">Granos x kilo</a>
+                        <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20Gift%20Cards%20de%20Brew%20%26%20Co." target="_blank" rel="noopener">Gift Cards</a>
                     </div>
                 </div>
                 <div class="footer-newsletter">
                     <h5>Newsletter</h5>
                     <p>Suscribite para recibir novedades, descuentos exclusivos y recetas de nuestros baristas.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Gracias por suscribirte!')">
+                    <form class="newsletter-form" id="newsletterForm">
                         <input type="email" placeholder="Tu email" required>
                         <button type="submit">Enviar</button>
                     </form>
+                    <p class="newsletter-success" id="newsletterSuccess">¡Gracias por suscribirte! Recibiras nuestras novedades.</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1946,6 +2057,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <div class="lightbox-label" id="lightboxLabel"></div>
+    </div>
 
     <!-- AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2012,6 +2130,101 @@
                     }
                 });
             });
+        });
+
+        // ========================================
+        // Menu items - WhatsApp on click
+        // ========================================
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const name = card.querySelector('h4').textContent;
+                const price = card.querySelector('.price').textContent;
+                const msg = encodeURIComponent('Hola! Me interesa pedir ' + name + ' (' + price + ')');
+                window.open('https://wa.me/5491112345678?text=' + msg, '_blank');
+            });
+        });
+
+        // ========================================
+        // Origin cards - expand on click
+        // ========================================
+        document.querySelectorAll('.origin-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const wasExpanded = card.classList.contains('expanded');
+                // Close all other cards
+                document.querySelectorAll('.origin-card.expanded').forEach(c => c.classList.remove('expanded'));
+                // Toggle this one
+                if (!wasExpanded) {
+                    card.classList.add('expanded');
+                }
+            });
+        });
+
+        // ========================================
+        // Gallery lightbox
+        // ========================================
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxLabel = document.getElementById('lightboxLabel');
+
+        // Image URLs mapped to gallery items
+        const galleryImages = [
+            'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&q=90',
+            'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=90',
+            'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=90',
+            'https://images.unsplash.com/photo-1534778101976-62847782c213?w=1200&q=90',
+            'https://images.unsplash.com/photo-1447933601403-56dc2f6421dc?w=1200&q=90',
+            'https://images.unsplash.com/photo-1542181961-9c3b252e41b9?w=1200&q=90',
+            'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=1200&q=90',
+            'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=1200&q=90'
+        ];
+
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const label = item.querySelector('.gallery-overlay').textContent;
+                lightboxImage.src = galleryImages[index];
+                lightboxImage.alt = label;
+                lightboxLabel.textContent = label;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        });
+
+        // ========================================
+        // Instagram items - open Instagram
+        // ========================================
+        document.querySelectorAll('.insta-item').forEach(item => {
+            item.addEventListener('click', () => {
+                window.open('https://instagram.com/brewandco', '_blank');
+            });
+        });
+
+        // ========================================
+        // Newsletter form
+        // ========================================
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterSuccess = document.getElementById('newsletterSuccess');
+
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            newsletterForm.querySelector('input').value = '';
+            newsletterSuccess.classList.add('show');
+            setTimeout(() => {
+                newsletterSuccess.classList.remove('show');
+            }, 5000);
         });
 
         // ========================================
