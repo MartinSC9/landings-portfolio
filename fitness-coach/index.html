@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FitPro — Entrenamiento personal con Coach Marcos Rivera en Buenos Aires. Transformá tu cuerpo con planes presenciales y online. +500 alumnos transformados.">
+    <meta name="keywords" content="entrenamiento personal, personal trainer, fitness, Buenos Aires, nutrición deportiva, preparación física, coach">
+    <meta name="author" content="Coach Marcos Rivera">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FitPro — Entrenamiento Personal con Coach Marcos Rivera">
+    <meta property="og:description" content="Transformá tu cuerpo, transformá tu vida. Planes presenciales y online en Buenos Aires.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
+    <meta property="og:url" content="https://fitpro-marcos.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FitPro — Entrenamiento Personal">
+    <meta name="twitter:description" content="Transformá tu cuerpo, transformá tu vida. +500 alumnos transformados.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+
+    <title>FitPro — Entrenamiento Personal | Coach Marcos Rivera</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "FitPro — Entrenamiento Personal",
+        "description": "Entrenamiento personal presencial y online con Coach Marcos Rivera en Buenos Aires.",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressCountry": "AR"
+        },
+        "telephone": "+5492804195492",
+        "priceRange": "$$$",
+        "openingHours": "Mo-Sa 07:00-21:00",
+        "sameAs": [
+            "https://instagram.com/fitpro.marcos",
+            "https://youtube.com/@fitpromarcos"
+        ]
+    }
+    </script>
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #e55a25;
+            --secondary: #1A1A2E;
+            --secondary-light: #22223a;
+            --accent: #E94560;
+            --white: #ffffff;
+            --gray-100: #f5f5f7;
+            --gray-200: #e8e8ed;
+            --gray-300: #b0b0c0;
+            --gray-800: #2a2a3e;
+            --text: #e0e0ee;
+            --text-dark: #1A1A2E;
+            --gradient-fire: linear-gradient(135deg, #FF6B35, #E94560);
+            --gradient-dark: linear-gradient(135deg, #1A1A2E, #16213E);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.3);
+            --shadow-card: 0 10px 40px rgba(0,0,0,0.15);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--secondary);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Bebas Neue', cursive;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--gray-300);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-fire);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700 !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80') center/cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,46,0.92) 0%, rgba(26,26,46,0.7) 50%, rgba(233,69,96,0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 24px;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,107,53,0.15);
+            border: 1px solid rgba(255,107,53,0.4);
+            color: var(--primary);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .hero h1 .highlight {
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--gray-300);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gradient-fire);
+            color: var(--white);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-scroll svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--gray-300);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats {
+            background: var(--gradient-fire);
+            padding: 48px 0;
+            position: relative;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+        }
+
+        .stats .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray-300);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-light {
+            background: var(--gray-100);
+        }
+
+        .section-light .section-title {
+            color: var(--secondary);
+        }
+
+        .section-light .section-subtitle {
+            color: #666;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: var(--gradient-fire);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2.5rem, 4vw, 3.2rem);
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .about-text h2 span {
+            color: var(--primary);
+        }
+
+        .about-text p {
+            color: var(--gray-300);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .about-certs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .cert-badge {
+            background: rgba(255,107,53,0.1);
+            border: 1px solid rgba(255,107,53,0.3);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--secondary-light);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 40px 28px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-fire);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(255,107,53,0.2);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(255,107,53,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            transition: all 0.4s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gradient-fire);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray-300);
+            font-size: 0.95rem;
+        }
+
+        /* ===== TRANSFORMATIONS ===== */
+        .transformations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .transform-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .transform-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .transform-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .transform-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26,26,46,0.95) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 28px;
+        }
+
+        .transform-result {
+            background: var(--gradient-fire);
+            color: var(--white);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .transform-overlay h4 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .transform-overlay p {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--secondary-light);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Bebas Neue', cursive;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 8px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card p {
+            color: var(--gray-300);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-fire);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .testimonial-detail {
+            font-size: 0.8rem;
+            color: var(--gray-300);
+        }
+
+        /* ===== PLANS ===== */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: center;
+        }
+
+        .plan-card {
+            background: var(--secondary-light);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .plan-card.featured {
+            background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(233,69,96,0.1));
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(255,107,53,0.2);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plan-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .plan-popular {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-fire);
+            color: var(--white);
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .plan-price {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .plan-period {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+
+        .plan-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--gray-300);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-features li svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .plan-features li svg.check {
+            stroke: var(--primary);
+        }
+
+        .plan-features li svg.x {
+            stroke: #555;
+        }
+
+        .plan-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ===== INSTAGRAM ===== */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+        }
+
+        .insta-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .insta-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .insta-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255,107,53,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .insta-overlay svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+        }
+
+        .insta-item:hover .insta-overlay {
+            opacity: 1;
+        }
+
+        .insta-cta {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .insta-cta a {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+
+        .insta-cta a:hover {
+            gap: 14px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 24px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary);
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer p {
+            color: var(--gray-300);
+            padding-bottom: 24px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(2.5rem, 4vw, 3.2rem);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .contact-info h2 span {
+            color: var(--primary);
+        }
+
+        .contact-info > p {
+            color: var(--gray-300);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-detail-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,107,53,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--primary);
+        }
+
+        .contact-detail-text strong {
+            display: block;
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        .contact-detail-text span {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            background: var(--secondary-light);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-sm);
+            color: var(--white);
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 44px;
+        }
+
+        .form-group select option {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 18px;
+            font-size: 1.05rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0d0d1a;
+            padding: 64px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand p {
+            color: var(--gray-300);
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gradient-fire);
+            transform: translateY(-3px);
+        }
+
+        .footer-social a svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gray-300);
+        }
+
+        .footer-social a:hover svg {
+            fill: var(--white);
+        }
+
+        .footer h4 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            text-align: center;
+            color: var(--gray-300);
+            font-size: 0.85rem;
+        }
+
+        /* ===== WHATSAPP FAB ===== */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            transition: all 0.3s;
+            animation: pulse-wa 2s infinite;
+        }
+
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37,211,102,0.5);
+        }
+
+        .whatsapp-fab svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+        }
+
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .plans-grid {
+                grid-template-columns: 1fr;
+                max-width: 440px;
+                margin: 0 auto;
+            }
+            .plan-card.featured {
+                transform: none;
+            }
+            .plan-card.featured:hover {
+                transform: translateY(-8px);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--secondary);
+                flex-direction: column;
+                justify-content: center;
+                padding: 40px;
+                gap: 24px;
+                transition: right 0.4s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .stats .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .transformations-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.9rem;
+            }
+
+            .contact-form {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">FIT<span>PRO</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" onclick="closeMenu()">Sobre mí</a></li>
+                <li><a href="#services" onclick="closeMenu()">Servicios</a></li>
+                <li><a href="#transformations" onclick="closeMenu()">Resultados</a></li>
+                <li><a href="#plans" onclick="closeMenu()">Planes</a></li>
+                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">Personal Trainer Certificado</div>
+            <h1 data-aos="fade-up" data-aos-delay="400">Coach <span class="highlight">Marcos Rivera</span></h1>
+            <p class="hero-tagline" data-aos="fade-up" data-aos-delay="600">Transform&aacute; tu cuerpo, transform&aacute; tu vida</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+                <a href="#contact" class="btn btn-primary">Empez&aacute; hoy</a>
+                <a href="#plans" class="btn btn-outline">Ver planes</a>
+            </div>
+        </div>
+        <a href="#stats" class="hero-scroll">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Alumnos transformados</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number">8</div>
+                <div class="stat-label">A&ntilde;os de experiencia</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number">15K</div>
+                <div class="stat-label">Seguidores</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Retenci&oacute;n de alumnos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Coach Marcos Rivera entrenando" loading="lazy">
+                    <div class="about-image-badge">8+ a&ntilde;os formando campeones</div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <div class="section-tag">Sobre m&iacute;</div>
+                    <h2>M&aacute;s que un entrenador, tu <span>aliado</span> en el cambio</h2>
+                    <p>Soy Marcos Rivera, entrenador personal certificado con m&aacute;s de 8 a&ntilde;os de experiencia transformando vidas en Buenos Aires. Mi enfoque combina ciencia del entrenamiento, nutrici&oacute;n basada en evidencia y acompa&ntilde;amiento constante.</p>
+                    <p>Creo que cada persona es &uacute;nica, por eso dise&ntilde;o planes 100% personalizados. No importa si est&aacute;s empezando o si quer&eacute;s competir: mi compromiso es llevarte al siguiente nivel con un m&eacute;todo probado y seguro.</p>
+                    <div class="about-certs">
+                        <span class="cert-badge">NSCA Certified</span>
+                        <span class="cert-badge">Nutrici&oacute;n Deportiva</span>
+                        <span class="cert-badge">CrossFit L2</span>
+                        <span class="cert-badge">Funcional Training</span>
+                        <span class="cert-badge">Rehabilitaci&oacute;n</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="background: rgba(0,0,0,0.15);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Servicios</div>
+                <h2 class="section-title">Lo que puedo hacer por vos</h2>
+                <p class="section-subtitle">Programas adaptados a tus objetivos, tu tiempo y tu nivel de experiencia.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-icon">🏋️</div>
+                    <h3>Entrenamiento Presencial</h3>
+                    <p>Sesiones 1 a 1 en gimnasio con seguimiento t&eacute;cnico, correcci&oacute;n de postura y progresi&oacute;n personalizada.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">💻</div>
+                    <h3>Entrenamiento Online</h3>
+                    <p>Plan de entrenamiento digital con videos, seguimiento semanal por videollamada y ajustes continuos.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">🥗</div>
+                    <h3>Plan Nutricional</h3>
+                    <p>Alimentaci&oacute;n estructurada seg&uacute;n tus metas: p&eacute;rdida de grasa, ganancia muscular o rendimiento.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">🏆</div>
+                    <h3>Prep. Competencias</h3>
+                    <p>Preparaci&oacute;n espec&iacute;fica para competencias de fitness, bodybuilding y funcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATIONS -->
+    <section class="section" id="transformations">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Resultados reales</div>
+                <h2 class="section-title">Transformaciones que hablan</h2>
+                <p class="section-subtitle">Cada resultado es el reflejo de compromiso, disciplina y un plan bien dise&ntilde;ado.</p>
+            </div>
+            <div class="transformations-grid">
+                <div class="transform-card" data-aos="fade-up" data-aos-delay="0">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Transformaci&oacute;n fitness" loading="lazy">
+                    <div class="transform-overlay">
+                        <span class="transform-result">-18 kg en 6 meses</span>
+                        <h4>Mart&iacute;n G.</h4>
+                        <p>De sedentario a correr su primera marat&oacute;n</p>
+                    </div>
+                </div>
+                <div class="transform-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=600&q=80" alt="Transformaci&oacute;n fitness" loading="lazy">
+                    <div class="transform-overlay">
+                        <span class="transform-result">+12 kg m&uacute;sculo</span>
+                        <h4>Luc&iacute;a R.</h4>
+                        <p>Ganancia muscular y confianza total</p>
+                    </div>
+                </div>
+                <div class="transform-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&q=80" alt="Transformaci&oacute;n fitness" loading="lazy">
+                    <div class="transform-overlay">
+                        <span class="transform-result">Competencia ganada</span>
+                        <h4>Diego M.</h4>
+                        <p>1er puesto en categor&iacute;a Men's Physique</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>&ldquo;Marcos no solo me entren&oacute;, me cambi&oacute; la mentalidad. Baj&eacute; 18 kilos y hoy corro marat&oacute;n. Es un crack absoluto.&rdquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div>
+                            <div class="testimonial-name">Mart&iacute;n G&oacute;mez</div>
+                            <div class="testimonial-detail">Alumno hace 2 a&ntilde;os</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>&ldquo;El plan online es incre&iacute;ble. Vivo en C&oacute;rdoba y Marcos me sigue como si estuviera al lado m&iacute;o. Resultados brutales.&rdquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LR</div>
+                        <div>
+                            <div class="testimonial-name">Luc&iacute;a Romero</div>
+                            <div class="testimonial-detail">Plan Online Premium</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>&ldquo;Me prepar&oacute; para mi primera competencia y qued&eacute; primero. Su conocimiento y dedicaci&oacute;n no tienen comparaci&oacute;n.&rdquo;</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DM</div>
+                        <div>
+                            <div class="testimonial-name">Diego Mart&iacute;nez</div>
+                            <div class="testimonial-detail">Competidor Men's Physique</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section" id="plans" style="background: rgba(0,0,0,0.15);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Planes</div>
+                <h2 class="section-title">Eleg&iacute; tu plan</h2>
+                <p class="section-subtitle">Inverti&iacute; en vos. Todos los planes incluyen evaluaci&oacute;n inicial gratuita.</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Basico -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="plan-name">B&aacute;sico</h3>
+                    <div class="plan-price">$25.000</div>
+                    <div class="plan-period">por mes</div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            3 d&iacute;as por semana
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Plan de entrenamiento
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Seguimiento mensual
+                        </li>
+                        <li>
+                            <svg class="x" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Plan nutricional
+                        </li>
+                        <li>
+                            <svg class="x" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Soporte 24/7
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Empezar</a>
+                </div>
+                <!-- Premium -->
+                <div class="plan-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-popular">M&aacute;s elegido</div>
+                    <h3 class="plan-name">Premium</h3>
+                    <div class="plan-price">$40.000</div>
+                    <div class="plan-period">por mes</div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            5 d&iacute;as por semana
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Plan de entrenamiento
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Seguimiento semanal
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Plan nutricional
+                        </li>
+                        <li>
+                            <svg class="x" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Soporte 24/7
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Empezar</a>
+                </div>
+                <!-- Elite -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="plan-name">Elite</h3>
+                    <div class="plan-price">$65.000</div>
+                    <div class="plan-period">por mes</div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Acceso ilimitado
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Plan de entrenamiento
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Seguimiento diario
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Plan nutricional completo
+                        </li>
+                        <li>
+                            <svg class="check" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            Soporte 24/7 por WhatsApp
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Empezar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section" id="instagram">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">@fitpro.marcos</div>
+                <h2 class="section-title">Seguime en Instagram</h2>
+                <p class="section-subtitle">Contenido diario: rutinas, tips de nutrici&oacute;n y motivaci&oacute;n.</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=400&q=80" alt="Instagram fitness" loading="lazy">
+                    <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+            </div>
+            <div class="insta-cta">
+                <a href="https://instagram.com/fitpro.marcos" target="_blank" rel="noopener">Seguime en Instagram &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" style="background: rgba(0,0,0,0.15);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Preguntas frecuentes</div>
+                <h2 class="section-title">Todo lo que necesit&aacute;s saber</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        &iquest;Necesito experiencia previa para empezar?
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para nada. Trabajo con personas de todos los niveles, desde principiantes absolutos hasta atletas avanzados. Tu plan se adapta 100% a tu nivel actual y vamos progresando de forma segura.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        &iquest;C&oacute;mo funciona el entrenamiento online?
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recib&iacute;s tu plan personalizado en una app, con videos de cada ejercicio. Hacemos seguimiento semanal por videollamada, ajustamos cargas y ejercicios seg&uacute;n tu progreso. Ten&eacute;s contacto directo conmigo por WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        &iquest;Cu&aacute;nto tiempo hasta ver resultados?
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Con consistencia y buena alimentaci&oacute;n, la mayor&iacute;a nota cambios en las primeras 4-6 semanas. Resultados visibles significativos suelen verse a partir de los 3 meses. Cada cuerpo es diferente, pero el compromiso siempre da frutos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        &iquest;Puedo pausar o cancelar mi plan?
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>S&iacute;, pod&eacute;s pausar tu plan hasta 2 semanas sin costo adicional (ideal para vacaciones). Para cancelar, solo necesit&aacute;s avisar con 7 d&iacute;as de anticipaci&oacute;n. Sin letra chica ni permanencia forzada.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        &iquest;D&oacute;nde se realizan las sesiones presenciales?
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Las sesiones presenciales se realizan en gimnasios asociados en Palermo y Belgrano, Buenos Aires. Tambi&eacute;n ofrezco entrenamiento a domicilio con equipamiento port&aacute;til para quienes prefieran entrenar en casa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="section-tag">Contacto</div>
+                    <h2>Listo para <span>empezar</span>?</h2>
+                    <p>Escrib&iacute;me y agendamos una evaluaci&oacute;n inicial gratuita. Sin compromiso, sin presi&oacute;n. Solo resultados.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <strong>WhatsApp</strong>
+                                <span>+54 9 280 419-5492</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <strong>Email</strong>
+                                <span>marcos@fitpro.com.ar</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <strong>Ubicaci&oacute;n</strong>
+                                <span>Palermo &amp; Belgrano, Buenos Aires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Tel&eacute;fono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+54 9 11 1234-5678">
+                        </div>
+                        <div class="form-group">
+                            <label for="goal">Objetivo</label>
+                            <select id="goal" name="goal" required>
+                                <option value="" disabled selected>Seleccion&aacute; tu objetivo</option>
+                                <option value="perdida-grasa">P&eacute;rdida de grasa</option>
+                                <option value="ganancia-muscular">Ganancia muscular</option>
+                                <option value="rendimiento">Rendimiento deportivo</option>
+                                <option value="competencia">Preparaci&oacute;n para competencia</option>
+                                <option value="salud">Salud general</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Cont&aacute;me un poco sobre vos y qu&eacute; busc&aacute;s..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">FIT<span>PRO</span></a>
+                    <p>Entrenamiento personal de alto nivel en Buenos Aires. Presencial y online. Tu transformaci&oacute;n empieza hoy.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/fitpro.marcos" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/@fitpromarcos" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://tiktok.com/@fitpro.marcos" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5492804195492" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Sobre m&iacute;</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#transformations">Resultados</a></li>
+                        <li><a href="#plans">Planes</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Presencial</a></li>
+                        <li><a href="#services">Online</a></li>
+                        <li><a href="#services">Nutrici&oacute;n</a></li>
+                        <li><a href="#services">Competencias</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Horarios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Lunes a Viernes</a></li>
+                        <li><a href="#">07:00 - 21:00</a></li>
+                        <li><a href="#">S&aacute;bados</a></li>
+                        <li><a href="#">08:00 - 14:00</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 FitPro &mdash; Coach Marcos Rivera. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FAB -->
+    <a href="https://wa.me/5492804195492?text=Hola%20Marcos!%20Quiero%20consultar%20por%20entrenamiento%20personal" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+            document.getElementById('hamburger').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('active');
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Form handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const goal = document.getElementById('goal').value;
+            const message = document.getElementById('message').value;
+            const text = `Hola Marcos! Soy ${name}. Mi objetivo: ${goal}. ${message}`;
+            const url = `https://wa.me/5492804195492?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

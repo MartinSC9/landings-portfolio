@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Digital — Cursos online de marketing digital, social media y emprendimiento. Clases grabadas, certificados verificables y comunidad exclusiva.">
+    <meta name="keywords" content="cursos online, marketing digital, social media, emprendimiento, educación digital, certificados">
+    <meta name="author" content="Aprende Digital">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aprende Digital — Cursos Online que Transforman">
+    <meta property="og:description" content="Cursos prácticos de marketing digital, social media y emprendimiento. Aprendé las habilidades que el mercado necesita.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://aprendedigital.com">
+    <meta property="og:site_name" content="Aprende Digital">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aprende Digital — Cursos Online que Transforman">
+    <meta name="twitter:description" content="Cursos prácticos de marketing digital, social media y emprendimiento.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop">
+
+    <title>Aprende Digital — Cursos Online que Transforman</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Cursos de Aprende Digital",
+        "description": "Cursos online de marketing digital, social media y emprendimiento",
+        "url": "https://aprendedigital.com",
+        "numberOfItems": 3,
+        "itemListElement": [
+            {
+                "@type": "Course",
+                "position": 1,
+                "name": "Marketing Digital Avanzado",
+                "description": "Dominá estrategias avanzadas de marketing digital para escalar negocios.",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Aprende Digital"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "49",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "1240"
+                },
+                "timeRequired": "PT40H"
+            },
+            {
+                "@type": "Course",
+                "position": 2,
+                "name": "Social Media Manager Pro",
+                "description": "Convertite en Social Media Manager profesional con herramientas y estrategias reales.",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Aprende Digital"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "39",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "reviewCount": "980"
+                },
+                "timeRequired": "PT30H"
+            },
+            {
+                "@type": "Course",
+                "position": 3,
+                "name": "Emprendé desde Cero",
+                "description": "Lanzá tu emprendimiento digital con un plan paso a paso.",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Aprende Digital"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "29",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.7",
+                    "reviewCount": "756"
+                },
+                "timeRequired": "PT25H"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============ RESET & BASE ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7C3AED;
+            --primary-dark: #6D28D9;
+            --primary-light: #A78BFA;
+            --secondary: #06B6D4;
+            --secondary-dark: #0891B2;
+            --bg: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --text-dark: #1E1B4B;
+            --text-body: #4B5563;
+            --text-light: #9CA3AF;
+            --border: #E5E7EB;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--primary);
+            background: rgba(124, 58, 237, 0.08);
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(124, 58, 237, 0.45);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid rgba(124, 58, 237, 0.2);
+        }
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+        .btn-cyan {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35);
+        }
+        .btn-cyan:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            padding: 10px 0;
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar.scrolled .nav-logo { color: var(--primary); }
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .navbar.scrolled .nav-logo-icon { background: rgba(124,58,237,0.1); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: white; }
+        .navbar.scrolled .nav-links a { color: var(--text-body); }
+        .navbar.scrolled .nav-links a:hover { color: var(--primary); }
+
+        .nav-cta {
+            background: rgba(255,255,255,0.15) !important;
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.25);
+            transition: all 0.3s;
+        }
+        .nav-cta:hover { background: rgba(255,255,255,0.25) !important; }
+        .navbar.scrolled .nav-cta {
+            background: var(--primary) !important;
+            color: white !important;
+            border-color: var(--primary) !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .nav-hamburger span {
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .navbar.scrolled .nav-hamburger span { background: var(--text-dark); }
+
+        /* ============ HERO ============ */
+        .hero {
+            background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 40%, #0EA5E9 100%);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6,182,212,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(124,58,237,0.2) 0%, transparent 40%);
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content { color: white; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50px;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            color: white;
+            margin-bottom: 28px;
+            backdrop-filter: blur(10px);
+        }
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #34D399;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 span {
+            background: linear-gradient(90deg, #67E8F9, #A5F3FC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 500px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 36px;
+        }
+        .hero-stat {
+            text-align: left;
+        }
+        .hero-stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+        }
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Floating course card */
+        .hero-visual {
+            position: relative;
+        }
+        .hero-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transform: rotate(2deg);
+            transition: transform 0.4s;
+            max-width: 380px;
+            margin-left: auto;
+        }
+        .hero-card:hover { transform: rotate(0deg) scale(1.02); }
+        .hero-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .hero-card-body {
+            padding: 20px;
+        }
+        .hero-card-tag {
+            display: inline-block;
+            background: rgba(124,58,237,0.08);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+        .hero-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+        }
+        .hero-card-meta svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+        .hero-card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .hero-card-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero-card-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .hero-card-btn {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .hero-card-btn:hover { background: var(--primary-dark); }
+
+        /* Floating elements */
+        .hero-float {
+            position: absolute;
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 12px 18px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            animation: float 3s ease-in-out infinite;
+        }
+        .hero-float-1 {
+            top: 10px;
+            left: -30px;
+            animation-delay: 0s;
+        }
+        .hero-float-2 {
+            bottom: 30px;
+            left: -10px;
+            animation-delay: 1s;
+        }
+        .hero-float-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .hero-float-icon.purple { background: rgba(124,58,237,0.1); }
+        .hero-float-icon.green { background: rgba(52,211,153,0.1); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ============ TRUSTED BY ============ */
+        .trusted {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--border);
+            background: white;
+        }
+        .trusted-label {
+            text-align: center;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+        .trusted-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .trusted-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-light);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+        .trusted-logo:hover { opacity: 0.8; }
+
+        /* ============ COURSES ============ */
+        .courses {
+            padding: 100px 0;
+        }
+        .courses-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .course-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: all 0.4s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
+        }
+        .course-card-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .course-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .course-card:hover .course-card-img {
+            transform: scale(1.05);
+        }
+        .course-card-category {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: white;
+            color: var(--primary);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .course-card-body {
+            padding: 24px;
+        }
+        .course-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .course-card-instructor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .course-card-instructor-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .course-card-instructor-name {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .course-card-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+        .course-card-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .course-card-info svg {
+            width: 14px;
+            height: 14px;
+        }
+        .course-card-stars {
+            color: #FBBF24;
+        }
+        .course-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .course-card-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .course-card-price small {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        .course-card-enroll {
+            background: var(--primary);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .course-card-enroll:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+        }
+
+        /* ============ WHY CHOOSE US ============ */
+        .why {
+            padding: 100px 0;
+            background: white;
+        }
+        .why-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 36px 24px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            background: var(--bg);
+        }
+        .why-card:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .why-card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 20px;
+        }
+        .why-card-icon.purple { background: rgba(124,58,237,0.1); }
+        .why-card-icon.cyan { background: rgba(6,182,212,0.1); }
+        .why-card-icon.green { background: rgba(52,211,153,0.1); }
+        .why-card-icon.amber { background: rgba(251,191,36,0.1); }
+        .why-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            font-size: 0.9rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* ============ INSTRUCTOR ============ */
+        .instructor {
+            padding: 100px 0;
+        }
+        .instructor .container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .instructor-img-wrap {
+            position: relative;
+        }
+        .instructor-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        .instructor-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 16px 24px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .instructor-badge-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(124,58,237,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .instructor-badge-text {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .instructor-badge-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .instructor-badge-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        .instructor-content .section-label { margin-bottom: 16px; }
+        .instructor-content h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 20px;
+        }
+        .instructor-content .bio {
+            font-size: 1rem;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        .instructor-credentials {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        .instructor-credentials li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+        }
+        .instructor-credentials li svg {
+            width: 20px;
+            height: 20px;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+        .instructor-socials {
+            display: flex;
+            gap: 12px;
+        }
+        .instructor-social {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        .instructor-social:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        .instructor-social svg { width: 18px; height: 18px; }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(6,182,212,0.2), transparent 50%);
+        }
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 56px;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonials-header .section-label {
+            background: rgba(255,255,255,0.15);
+            color: white;
+        }
+        .testimonials-header .section-title { color: white; }
+        .testimonials-header .section-subtitle { color: rgba(255,255,255,0.7); }
+
+        .testimonials-track-container {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .testimonial-slide {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            padding: 0 24px;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            color: white;
+        }
+        .testimonial-stars {
+            color: #FBBF24;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .testimonial-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .testimonial-course {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .testimonials-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 36px;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonials-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .testimonials-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        /* ============ PRICING ============ */
+        .pricing {
+            padding: 100px 0;
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            border: 2px solid var(--border);
+            position: relative;
+            transition: all 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+        .pricing-card.featured::before {
+            content: 'Recomendado';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 20px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .pricing-card-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        .pricing-card-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+        .pricing-card-price span { font-size: 1rem; color: var(--text-light); font-weight: 400; }
+        .pricing-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        .pricing-features li svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .pricing-features li.disabled {
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+        .pricing-features li.disabled svg { opacity: 0.3; }
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ============ NEWSLETTER ============ */
+        .newsletter {
+            padding: 80px 0;
+            background: white;
+        }
+        .newsletter-box {
+            background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 50%, #06B6D4 100%);
+            border-radius: var(--radius-xl);
+            padding: 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08), transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(6,182,212,0.15), transparent 40%);
+        }
+        .newsletter-box > * { position: relative; z-index: 1; }
+        .newsletter-box h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: white;
+            margin-bottom: 12px;
+        }
+        .newsletter-box p {
+            color: rgba(255,255,255,0.8);
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+        .newsletter-form {
+            display: flex;
+            max-width: 480px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 22px;
+            border: 2px solid rgba(255,255,255,0.25);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+        .newsletter-form input:focus { border-color: white; }
+        .newsletter-form button {
+            padding: 16px 28px;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        }
+
+        /* ============ FAQ ============ */
+        .faq {
+            padding: 100px 0;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s;
+        }
+        .faq-item:hover { border-color: var(--primary-light); }
+        .faq-item.active { border-color: var(--primary); }
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            color: var(--primary);
+        }
+        .faq-item.active .faq-question svg { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-body);
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 64px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-brand h3 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-social {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        .footer-social:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        .footer-social svg { width: 16px; height: 16px; }
+        .footer-col h4 {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: white; }
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-bottom a { transition: color 0.3s; }
+        .footer-bottom a:hover { color: white; }
+
+        /* ============ WHATSAPP FLOAT ============ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: whatsapp-bounce 2s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 32px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+        @keyframes whatsapp-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { order: -1; }
+            .hero-card { margin: 0 auto; }
+            .courses-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .instructor .container { grid-template-columns: 1fr; }
+            .instructor-img { height: 350px; }
+            .instructor-badge { right: 20px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 24px;
+                gap: 16px;
+                box-shadow: var(--shadow-lg);
+                border-radius: 0 0 var(--radius-md) var(--radius-md);
+            }
+            .nav-links.open a { color: var(--text-dark) !important; }
+            .nav-links.open .nav-cta {
+                background: var(--primary) !important;
+                color: white !important;
+                text-align: center;
+                display: block;
+            }
+            .hero { padding: 130px 0 60px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-float { display: none; }
+            .hero-stats { gap: 20px; }
+            .hero-stat-value { font-size: 1.3rem; }
+            .courses-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .testimonial-slide { grid-template-columns: 1fr; }
+            .newsletter-box { padding: 40px 24px; }
+            .newsletter-form { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { justify-content: center; text-align: center; }
+            .trusted-logos { gap: 24px; }
+            .trusted-logo { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .hero-card { max-width: 100%; }
+            .hero-stats { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">🎓</span>
+                Aprende Digital
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#ventajas">Ventajas</a></li>
+                <li><a href="#instructor">Instructor</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cursos" class="nav-cta">Empezar ahora</a></li>
+            </ul>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    +5.000 estudiantes activos
+                </div>
+                <h1>Aprendé las habilidades que <span>el mercado necesita</span></h1>
+                <p class="hero-subtitle">Cursos prácticos de marketing digital, redes sociales y emprendimiento. Aprendé a tu ritmo, con proyectos reales y acompañamiento profesional.</p>
+                <div class="hero-buttons">
+                    <a href="#cursos" class="btn btn-primary">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        Ver cursos
+                    </a>
+                    <a href="#newsletter" class="btn btn-outline">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Clase gratis
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">+50</div>
+                        <div class="hero-stat-label">Cursos disponibles</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">98%</div>
+                        <div class="hero-stat-label">Satisfacción</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">15k+</div>
+                        <div class="hero-stat-label">Egresados</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <div class="hero-card">
+                    <img class="hero-card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Marketing Digital Avanzado">
+                    <div class="hero-card-body">
+                        <span class="hero-card-tag">Más vendido</span>
+                        <h3 class="hero-card-title">Marketing Digital Avanzado</h3>
+                        <div class="hero-card-meta">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                40 horas
+                            </span>
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                1.240 alumnos
+                            </span>
+                            <span style="color: #FBBF24;">★ 4.9</span>
+                        </div>
+                        <div class="hero-card-bottom">
+                            <span class="hero-card-price">$49 USD</span>
+                            <button class="hero-card-btn">Inscribirme</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-float hero-float-1">
+                    <span class="hero-float-icon purple">🏆</span>
+                    <div>
+                        <strong>Certificado</strong><br>
+                        <small style="color: var(--text-light);">Verificable online</small>
+                    </div>
+                </div>
+                <div class="hero-float hero-float-2">
+                    <span class="hero-float-icon green">✅</span>
+                    <div>
+                        <strong>+150 clases</strong><br>
+                        <small style="color: var(--text-light);">Nuevas cada semana</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRUSTED BY ===== -->
+    <section class="trusted">
+        <div class="container">
+            <p class="trusted-label">Nuestros egresados trabajan en</p>
+            <div class="trusted-logos" data-aos="fade-up" data-aos-duration="600">
+                <span class="trusted-logo">MercadoLibre</span>
+                <span class="trusted-logo">Globant</span>
+                <span class="trusted-logo">Accenture</span>
+                <span class="trusted-logo">Google</span>
+                <span class="trusted-logo">Meta</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COURSES ===== -->
+    <section class="courses" id="cursos">
+        <div class="container">
+            <div class="courses-header" data-aos="fade-up">
+                <span class="section-label">📚 Cursos destacados</span>
+                <h2 class="section-title">Elegí tu próximo paso profesional</h2>
+                <p class="section-subtitle">Cursos diseñados por profesionales en actividad, con proyectos reales y soporte continuo.</p>
+            </div>
+            <div class="courses-grid">
+
+                <!-- Course 1 -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="course-card-img-wrap">
+                        <img class="course-card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Marketing Digital Avanzado">
+                        <span class="course-card-category">Marketing</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3 class="course-card-title">Marketing Digital Avanzado</h3>
+                        <div class="course-card-instructor">
+                            <img class="course-card-instructor-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Lucas Mendoza">
+                            <span class="course-card-instructor-name">Lucas Mendoza</span>
+                        </div>
+                        <div class="course-card-info">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                40 horas
+                            </span>
+                            <span class="course-card-stars">★★★★★</span>
+                            <span>4.9 (1.240)</span>
+                        </div>
+                        <div class="course-card-footer">
+                            <span class="course-card-price">$49 <small>USD</small></span>
+                            <button class="course-card-enroll">Inscribirme</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-img-wrap">
+                        <img class="course-card-img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=300&fit=crop" alt="Social Media Manager Pro">
+                        <span class="course-card-category">Social Media</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3 class="course-card-title">Social Media Manager Pro</h3>
+                        <div class="course-card-instructor">
+                            <img class="course-card-instructor-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Camila Ríos">
+                            <span class="course-card-instructor-name">Camila Ríos</span>
+                        </div>
+                        <div class="course-card-info">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                30 horas
+                            </span>
+                            <span class="course-card-stars">★★★★★</span>
+                            <span>4.8 (980)</span>
+                        </div>
+                        <div class="course-card-footer">
+                            <span class="course-card-price">$39 <small>USD</small></span>
+                            <button class="course-card-enroll">Inscribirme</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-img-wrap">
+                        <img class="course-card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&h=300&fit=crop" alt="Emprendé desde Cero">
+                        <span class="course-card-category">Emprendimiento</span>
+                    </div>
+                    <div class="course-card-body">
+                        <h3 class="course-card-title">Emprendé desde Cero</h3>
+                        <div class="course-card-instructor">
+                            <img class="course-card-instructor-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Martín Acosta">
+                            <span class="course-card-instructor-name">Martín Acosta</span>
+                        </div>
+                        <div class="course-card-info">
+                            <span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                25 horas
+                            </span>
+                            <span class="course-card-stars">★★★★★</span>
+                            <span>4.7 (756)</span>
+                        </div>
+                        <div class="course-card-footer">
+                            <span class="course-card-price">$29 <small>USD</small></span>
+                            <button class="course-card-enroll">Inscribirme</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why" id="ventajas">
+        <div class="container">
+            <div class="why-header" data-aos="fade-up">
+                <span class="section-label">✨ Ventajas</span>
+                <h2 class="section-title">Por qué elegirnos</h2>
+                <p class="section-subtitle">Todo lo que necesitás para aprender de verdad, sin excusas.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="why-card-icon purple">📹</div>
+                    <h3>Clases grabadas 24/7</h3>
+                    <p>Accedé a todas las clases cuando quieras. Sin horarios, sin límites. Repasá cuantas veces necesites.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card-icon cyan">📜</div>
+                    <h3>Certificado verificable</h3>
+                    <p>Recibí un certificado con código QR verificable que podés agregar a tu LinkedIn y CV.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card-icon green">👥</div>
+                    <h3>Comunidad privada</h3>
+                    <p>Unite a nuestra comunidad exclusiva de estudiantes y profesionales. Networking real.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card-icon amber">🎯</div>
+                    <h3>Mentorías en vivo</h3>
+                    <p>Sesiones semanales en vivo con los instructores para resolver dudas y revisar proyectos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTRUCTOR ===== -->
+    <section class="instructor" id="instructor">
+        <div class="container">
+            <div class="instructor-img-wrap" data-aos="fade-right" data-aos-duration="800">
+                <img class="instructor-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop" alt="Lucas Mendoza - Instructor principal">
+                <div class="instructor-badge">
+                    <span class="instructor-badge-icon">⭐</span>
+                    <div class="instructor-badge-text">
+                        <div class="instructor-badge-value">4.9/5.0</div>
+                        <div class="instructor-badge-label">Valoración promedio</div>
+                    </div>
+                </div>
+            </div>
+            <div class="instructor-content" data-aos="fade-left" data-aos-duration="800">
+                <span class="section-label">👨‍🏫 Tu instructor</span>
+                <h2>Lucas Mendoza</h2>
+                <p class="bio">Especialista en marketing digital con más de 10 años de experiencia. Trabajó con marcas como MercadoLibre, Despegar y Tiendanube. Apasionado por la educación y por ayudar a personas a construir carreras digitales exitosas.</p>
+                <ul class="instructor-credentials">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Google Ads & Analytics Certified
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        +15.000 estudiantes formados
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Speaker en eCommerce Day y Social Media Week
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        MBA en Marketing Digital — Universidad de Palermo
+                    </li>
+                </ul>
+                <div class="instructor-socials">
+                    <a href="#" class="instructor-social" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" class="instructor-social" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </a>
+                    <a href="#" class="instructor-social" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" class="instructor-social" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="testimonials-header" data-aos="fade-up">
+                <span class="section-label">💬 Testimonios</span>
+                <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+                <p class="section-subtitle">Miles de personas ya transformaron su carrera con nuestros cursos.</p>
+            </div>
+            <div class="testimonials-track-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">"El curso de Marketing Digital me cambió la vida. En 3 meses conseguí mi primer cliente freelance y hoy manejo campañas para 5 marcas. La inversión se pagó sola en la primera semana."</p>
+                            <div class="testimonial-author">
+                                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Valentina López">
+                                <div>
+                                    <div class="testimonial-name">Valentina López</div>
+                                    <div class="testimonial-course">Marketing Digital Avanzado</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">"Venía de estudiar algo que no me gustaba. Con el curso de Social Media encontré mi vocación. Hoy trabajo remoto para una agencia de España y gano en dólares. Agradecido infinitamente."</p>
+                            <div class="testimonial-author">
+                                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Tomás Herrera">
+                                <div>
+                                    <div class="testimonial-name">Tomás Herrera</div>
+                                    <div class="testimonial-course">Social Media Manager Pro</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">"Lancé mi tienda online después de terminar 'Emprendé desde Cero'. Las herramientas y plantillas que te dan son increíbles. En 6 meses facturé más que en mi trabajo anterior."</p>
+                            <div class="testimonial-author">
+                                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Sofía Martínez">
+                                <div>
+                                    <div class="testimonial-name">Sofía Martínez</div>
+                                    <div class="testimonial-course">Emprendé desde Cero</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">"La comunidad es lo mejor. No es solo un curso, es un ecosistema de personas que se ayudan. Las mentorías en vivo con Lucas valen oro. Recomiendo a ojos cerrados."</p>
+                            <div class="testimonial-author">
+                                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" alt="Nicolás Fernández">
+                                <div>
+                                    <div class="testimonial-name">Nicolás Fernández</div>
+                                    <div class="testimonial-course">Marketing Digital Avanzado</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-dots" data-aos="fade-up" data-aos-delay="300">
+                <button class="testimonials-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="testimonials-dot" data-slide="1" aria-label="Slide 2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="pricing-header" data-aos="fade-up">
+                <span class="section-label">💎 Planes</span>
+                <h2 class="section-title">Elegí tu plan</h2>
+                <p class="section-subtitle">Empezá gratis o desbloqueá todo el potencial con Premium.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Free -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pricing-card-name">Free</div>
+                    <div class="pricing-card-price">$0 <span>/ mes</span></div>
+                    <div class="pricing-card-desc">Perfecto para explorar y probar la plataforma.</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Acceso a clases gratuitas
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Comunidad general
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Recursos descargables básicos
+                        </li>
+                        <li class="disabled">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Cursos completos
+                        </li>
+                        <li class="disabled">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Certificado verificable
+                        </li>
+                        <li class="disabled">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Mentorías en vivo
+                        </li>
+                        <li class="disabled">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Comunidad privada VIP
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%; justify-content: center;">Empezar gratis</a>
+                </div>
+                <!-- Premium -->
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card-name">Premium</div>
+                    <div class="pricing-card-price">$19 <span>/ mes</span></div>
+                    <div class="pricing-card-desc">Acceso total a cursos, certificados y mentorías.</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Todos los cursos ilimitados
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Certificados verificables
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mentorías en vivo semanales
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Comunidad privada VIP
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Plantillas y recursos premium
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Acceso anticipado a nuevos cursos
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Soporte prioritario
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Suscribirme ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-box" data-aos="zoom-in" data-aos-duration="600">
+                <h2>Recibí una clase gratis</h2>
+                <p>Dejanos tu email y te enviamos acceso a una masterclass gratuita de marketing digital.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="tu@email.com" required aria-label="Email">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header" data-aos="fade-up">
+                <span class="section-label">❓ Preguntas frecuentes</span>
+                <h2 class="section-title">Todo lo que necesitás saber</h2>
+                <p class="section-subtitle">Si tenés otra duda, escribinos por WhatsApp.</p>
+            </div>
+            <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="faq-item active">
+                    <button class="faq-question" aria-expanded="true">
+                        ¿Necesito experiencia previa para tomar los cursos?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">No. Nuestros cursos están diseñados para todos los niveles. Empezamos desde cero y avanzamos hasta nivel profesional. Solo necesitás ganas de aprender y una computadora con internet.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Cómo recibo el certificado?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Al completar el 100% del curso y aprobar el proyecto final, recibís un certificado digital con código QR verificable. Podés descargarlo en PDF y agregarlo a tu perfil de LinkedIn.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Puedo acceder a los cursos desde el celular?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Sí, nuestra plataforma es 100% responsive. Podés ver las clases, hacer ejercicios y participar en la comunidad desde cualquier dispositivo: computadora, tablet o celular.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Qué métodos de pago aceptan?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Aceptamos tarjetas de crédito/débito (Visa, Mastercard, AMEX), MercadoPago, PayPal y transferencia bancaria. También podés pagar en hasta 6 cuotas sin interés con MercadoPago.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Tienen política de reembolso?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Sí, ofrecemos garantía de satisfacción de 7 días. Si el curso no cumple tus expectativas, te devolvemos el 100% de tu dinero sin preguntas. Queremos que inviertas con total confianza.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Por cuánto tiempo tengo acceso al curso?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Acceso de por vida. Una vez que comprás un curso individual, es tuyo para siempre, incluyendo todas las actualizaciones futuras. Si tenés suscripción Premium, el acceso es mientras tu suscripción esté activa.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>🎓 Aprende Digital</h3>
+                    <p>Cursos online que transforman carreras. Aprendé marketing digital, social media y emprendimiento con profesionales en actividad.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48"/></svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#instructor">Instructores</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="https://wa.me/5492804195492">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de reembolso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Aprende Digital. Todos los derechos reservados.</span>
+                <span>Hecho con 💜 desde Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/5492804195492" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.908 15.908 0 0 0 16.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.302 22.602c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.946.324-5.656-1.216-4.746-1.97-7.8-6.79-8.034-7.104-.226-.314-1.886-2.512-1.886-4.79s1.194-3.4 1.618-3.866c.39-.428.926-.642 1.442-.642.174 0 .33.016.472.03.424.018.636.042.916.712.348.834 1.198 2.916 1.302 3.128.106.214.212.502.066.796-.138.3-.258.486-.472.748-.214.262-.44.464-.654.698-.214.24-.436.498-.186.926.25.428 1.112 1.834 2.388 2.972 1.642 1.462 3.024 1.916 3.454 2.128.428.214.68.178.93-.106.256-.29 1.096-1.274 1.388-1.714.286-.428.58-.356.976-.214.4.144 2.476 1.168 2.9 1.382.424.214.706.32.81.498.106.18.106 1.03-.284 2.132z"/></svg>
+    </a>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Init AOS
+        AOS.init({
+            once: true,
+            duration: 600,
+            offset: 80
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // Testimonials carousel
+        const track = document.getElementById('testimonialsTrack');
+        const dots = document.querySelectorAll('.testimonials-dot');
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.slide));
+                resetAutoSlide();
+            });
+        });
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                goToSlide((currentSlide + 1) % dots.length);
+            }, 5000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        startAutoSlide();
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                // Open clicked (if it was closed)
+                if (!isActive) {
+                    item.classList.add('active');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Newsletter submit
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const input = e.target.querySelector('input');
+            const btn = e.target.querySelector('button');
+            btn.textContent = 'Enviado!';
+            btn.style.background = '#34D399';
+            btn.style.color = 'white';
+            input.value = '';
+            setTimeout(() => {
+                btn.textContent = 'Enviar';
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 3000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
