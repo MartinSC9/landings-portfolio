@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roble Muebles — Mueblería & Diseño de Interiores | Buenos Aires</title>
+  <meta name="description" content="Muebles de diseño con fabricación propia. Living, dormitorio, comedor y oficina. Materiales nobles, diseño contemporáneo y envío a todo el país. Showroom en Palermo." />
+  <meta name="keywords" content="muebles de diseño buenos aires, mueblería palermo, sofás diseño argentino, mesas de comedor madera, muebles living modernos, escritorios home office, muebles a medida" />
+  <meta name="author" content="Roble Muebles" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6B4C2F" />
+  <link rel="canonical" href="https://roblemuebles.com.ar" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Roble Muebles — Mueblería & Diseño de Interiores" />
+  <meta property="og:description" content="Muebles de diseño con fabricación propia. Materiales nobles, diseño contemporáneo y envío a todo el país." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80" />
+  <meta property="og:url" content="https://roblemuebles.com.ar" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Roble Muebles" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roble Muebles — Mueblería & Diseño de Interiores" />
+  <meta name="twitter:description" content="Muebles de diseño con fabricación propia. Materiales nobles y envío a todo el país." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪑</text></svg>" />
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=180&q=80" />
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FurnitureStore",
+    "name": "Roble Muebles",
+    "description": "Muebles de diseño con fabricación propia en Buenos Aires",
+    "url": "https://roblemuebles.com.ar",
+    "telephone": "+54 11 44XX-XXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Santa Fe 4800",
+      "addressLocality": "Palermo",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHours": "Mo-Sa 10:00-20:00",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "380" },
+    "priceRange": "$$$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --oak: #6B4C2F;
+      --oak-light: #8B6B47;
+      --oak-dark: #4A3420;
+      --forest: #3D5A3E;
+      --sage: #9CAF88;
+      --cream: #F7F3EE;
+      --sand: #E8DFD3;
+      --white: #FFFFFF;
+      --black: #1C1810;
+      --text: #2C2820;
+      --text-light: #8A8279;
+      --warm-gray: #B5AEA5;
+      --shadow: 0 4px 24px rgba(108,76,47,0.08);
+      --shadow-lg: 0 16px 48px rgba(108,76,47,0.12);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 16px 0; transition: all 0.4s;
+    }
+    .nav.scrolled {
+      background: rgba(247,243,238,0.97); backdrop-filter: blur(20px);
+      padding: 10px 0; box-shadow: 0 1px 15px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem; color: var(--white);
+      text-decoration: none; transition: color 0.4s;
+    }
+    .nav.scrolled .nav-logo { color: var(--oak); }
+    .nav-logo-icon {
+      width: 32px; height: 32px; background: var(--oak);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 18px; height: 18px; stroke: white; fill: none; stroke-width: 2; }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85); text-decoration: none;
+      font-size: 0.88rem; font-weight: 500; transition: color 0.3s;
+    }
+    .nav.scrolled .nav-links a { color: var(--text); }
+    .nav-links a:hover { color: var(--oak); }
+    .nav-cta {
+      background: var(--oak) !important; color: var(--white) !important;
+      padding: 10px 24px !important; border-radius: 50px;
+      font-weight: 600 !important; transition: all 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--oak-light) !important; transform: translateY(-2px); }
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .nav-hamburger span { width: 24px; height: 2px; background: white; transition: all 0.3s; }
+    .nav.scrolled .nav-hamburger span { background: var(--oak); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--oak-dark);
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 120px 60px 80px; position: relative;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 18px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--sage); margin-bottom: 28px;
+      width: fit-content;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); }
+    .hero h1 {
+      font-size: clamp(2.8rem, 4.5vw, 4rem);
+      color: var(--white); line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--sage); }
+    .hero-desc {
+      font-size: 1.05rem; color: rgba(255,255,255,0.55);
+      margin-bottom: 36px; max-width: 460px;
+      font-weight: 300; line-height: 1.8;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 0.92rem;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.3s; font-family: 'Inter';
+    }
+    .btn-oak { background: var(--oak); color: var(--white); }
+    .btn-oak:hover { background: var(--oak-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(107,76,47,0.3); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.25); }
+    .btn-outline:hover { border-color: var(--sage); color: var(--sage); }
+
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 48px;
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-stat-num {
+      font-family: 'DM Serif Display'; font-size: 2rem; color: var(--white);
+    }
+    .hero-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+    .hero-right { position: relative; overflow: hidden; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-tag-float {
+      position: absolute; bottom: 32px; left: 32px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(15px);
+      padding: 16px 24px; border-radius: var(--radius);
+      color: var(--white);
+    }
+    .hero-tag-float strong { display: block; font-size: 0.95rem; }
+    .hero-tag-float span { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+
+    /* SECTIONS */
+    .section { padding: 100px 0; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--oak); font-weight: 600; font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .section-tag::before, .section-tag::after {
+      content: ''; width: 20px; height: 1px; background: var(--oak);
+    }
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--black); margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 1rem; color: var(--text-light);
+      max-width: 560px; margin: 0 auto; font-weight: 300;
+    }
+
+    /* CATEGORIES */
+    .categories-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .cat-card {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius-lg);
+      height: 380px; cursor: pointer;
+    }
+    .cat-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s;
+    }
+    .cat-card:hover img { transform: scale(1.08); }
+    .cat-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(transparent 40%, rgba(28,24,16,0.8));
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 28px;
+      transition: background 0.3s;
+    }
+    .cat-card:hover .cat-overlay { background: linear-gradient(transparent 20%, rgba(28,24,16,0.85)); }
+    .cat-name { color: var(--white); font-size: 1.4rem; margin-bottom: 4px; }
+    .cat-count { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+    .cat-arrow {
+      position: absolute; top: 20px; right: 20px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      color: white; opacity: 0; transition: all 0.3s;
+      transform: translateX(-10px);
+    }
+    .cat-card:hover .cat-arrow { opacity: 1; transform: translateX(0); }
+
+    /* FEATURED PRODUCTS */
+    .products-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s;
+    }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .product-img { position: relative; height: 300px; overflow: hidden; background: var(--sand); }
+    .product-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .product-card:hover .product-img img { transform: scale(1.05); }
+    .product-badge {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--forest); color: var(--white);
+      padding: 5px 14px; border-radius: 50px;
+      font-size: 0.75rem; font-weight: 600;
+    }
+    .product-wishlist {
+      position: absolute; top: 16px; right: 16px;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--white); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    .product-wishlist:hover { transform: scale(1.1); }
+    .product-wishlist svg { width: 18px; height: 18px; stroke: var(--oak); fill: none; stroke-width: 2; }
+    .product-info { padding: 24px; }
+    .product-category { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+    .product-name { font-size: 1.25rem; color: var(--black); margin-bottom: 8px; }
+    .product-desc { font-size: 0.85rem; color: var(--text-light); font-weight: 300; margin-bottom: 16px; }
+    .product-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .product-price { font-family: 'DM Serif Display'; font-size: 1.3rem; color: var(--oak); }
+    .product-price small { font-family: 'Inter'; font-size: 0.75rem; color: var(--text-light); }
+    .product-btn {
+      background: var(--cream); color: var(--oak);
+      padding: 10px 20px; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600;
+      text-decoration: none; transition: all 0.3s;
+    }
+    .product-btn:hover { background: var(--oak); color: var(--white); }
+
+    /* WHY US */
+    .why-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .why-card {
+      text-align: center; padding: 40px 20px;
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .why-icon {
+      width: 60px; height: 60px; margin: 0 auto 18px;
+      background: var(--sand); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--oak); transition: all 0.3s;
+    }
+    .why-card:hover .why-icon { background: var(--oak); color: var(--white); }
+    .why-card h3 { font-size: 1.15rem; color: var(--black); margin-bottom: 8px; }
+    .why-card p { font-size: 0.85rem; color: var(--text-light); font-weight: 300; line-height: 1.7; }
+
+    /* SHOWROOM */
+    .showroom-section {
+      position: relative; min-height: 550px;
+      display: flex; align-items: center;
+      background: linear-gradient(rgba(28,24,16,0.55), rgba(28,24,16,0.55)),
+        url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&q=80') center/cover no-repeat;
+    }
+    .showroom-content {
+      position: relative; z-index: 2;
+      max-width: 600px; margin-left: 10%;
+    }
+    .showroom-content .section-tag { color: var(--sage); }
+    .showroom-content .section-tag::before, .showroom-content .section-tag::after { background: var(--sage); }
+    .showroom-content h2 { font-size: 2.8rem; color: var(--white); margin-bottom: 16px; }
+    .showroom-content p { color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 28px; line-height: 1.8; }
+    .showroom-features {
+      display: flex; gap: 32px; margin-bottom: 32px;
+    }
+    .show-feat {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.7); font-size: 0.88rem;
+    }
+    .show-feat svg { color: var(--sage); flex-shrink: 0; }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 16px;
+    }
+    .gal-item {
+      border-radius: var(--radius); overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .gal-item:nth-child(1) { grid-column: span 2; }
+    .gal-item:nth-child(4) { grid-column: span 2; }
+    .gal-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .gal-item:hover img { transform: scale(1.05); }
+
+    /* TESTIMONIALS */
+    .test-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .test-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .test-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .test-stars { color: #F59E0B; margin-bottom: 16px; font-size: 1rem; }
+    .test-text {
+      font-size: 0.95rem; color: var(--text);
+      font-weight: 300; line-height: 1.8; margin-bottom: 24px;
+      font-style: italic;
+    }
+    .test-author { display: flex; align-items: center; gap: 14px; }
+    .test-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+    .test-name { font-weight: 600; font-size: 0.9rem; }
+    .test-role { font-size: 0.78rem; color: var(--text-light); }
+
+    /* BRANDS */
+    .brands-bar {
+      padding: 60px 0;
+      border-top: 1px solid var(--sand);
+      border-bottom: 1px solid var(--sand);
+    }
+    .brands-label {
+      text-align: center; font-size: 0.75rem; color: var(--text-light);
+      letter-spacing: 3px; text-transform: uppercase; margin-bottom: 32px;
+    }
+    .brands-logos {
+      display: flex; justify-content: center; align-items: center;
+      gap: 60px; flex-wrap: wrap; opacity: 0.35;
+    }
+    .brand-name {
+      font-family: 'DM Serif Display'; font-size: 1.5rem;
+      color: var(--black); letter-spacing: 1px;
+    }
+
+    /* CONTACT */
+    .contact-bg { background: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: start;
+    }
+    .contact-left h2 { font-size: 2.5rem; color: var(--black); margin-bottom: 16px; }
+    .contact-left > p { color: var(--text-light); font-weight: 300; margin-bottom: 36px; line-height: 1.8; }
+    .contact-methods { display: flex; flex-direction: column; gap: 20px; }
+    .contact-method {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px; background: var(--cream);
+      border-radius: var(--radius); transition: all 0.3s;
+    }
+    .contact-method:hover { transform: translateX(6px); }
+    .contact-method-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--white); display: flex; align-items: center; justify-content: center;
+      color: var(--oak); flex-shrink: 0;
+    }
+    .contact-method-text strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
+    .contact-method-text span { font-size: 0.85rem; color: var(--text-light); font-weight: 300; }
+    .contact-method-text a { color: var(--oak); text-decoration: none; font-weight: 600; }
+
+    .contact-map-form { display: flex; flex-direction: column; gap: 24px; }
+    .contact-map {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow); height: 220px;
+    }
+    .contact-map iframe { width: 100%; height: 100%; border: 0; }
+    .contact-form {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+    .contact-form h3 { font-size: 1.3rem; color: var(--black); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 600;
+      color: var(--text); margin-bottom: 8px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px;
+      border: 2px solid var(--sand); border-radius: var(--radius);
+      font-family: 'Inter'; font-size: 0.9rem;
+      color: var(--text); background: var(--white);
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--oak);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: var(--oak); color: var(--white);
+      border: none; border-radius: 50px;
+      font-weight: 600; font-size: 0.92rem;
+      cursor: pointer; transition: all 0.3s;
+      font-family: 'Inter';
+    }
+    .form-submit:hover { background: var(--oak-light); transform: translateY(-2px); }
+
+    /* CTA */
+    .cta-bar {
+      background: var(--oak-dark);
+      padding: 60px 0;
+    }
+    .cta-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 24px;
+    }
+    .cta-text h2 { font-size: 2rem; color: var(--white); margin-bottom: 6px; }
+    .cta-text p { color: rgba(255,255,255,0.5); font-weight: 300; }
+    .btn-sage { background: var(--sage); color: var(--oak-dark); }
+    .btn-sage:hover { background: #b3c4a0; transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer { background: var(--black); padding: 60px 0 28px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-brand h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 12px; }
+    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 300; line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover { background: var(--oak); color: var(--white); }
+    .footer-col h4 {
+      color: var(--white); font-family: 'Inter';
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .footer-col a {
+      display: block; color: rgba(255,255,255,0.4);
+      text-decoration: none; font-size: 0.88rem;
+      padding: 4px 0; transition: color 0.3s; font-weight: 300;
+    }
+    .footer-col a:hover { color: var(--sage); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex; justify-content: space-between;
+      color: rgba(255,255,255,0.25); font-size: 0.78rem;
+    }
+    .footer-payments { display: flex; gap: 8px; align-items: center; color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+
+    /* WSP */
+    .wsp-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      display: flex; align-items: center; gap: 10px;
+      background: #25D366; color: var(--white);
+      padding: 14px 22px 14px 16px; border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none; font-weight: 600; font-size: 0.88rem;
+      transition: all 0.3s;
+    }
+    .wsp-float:hover { transform: translateY(-3px); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+    .wsp-float svg { width: 24px; height: 24px; fill: white; flex-shrink: 0; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: 240px 240px 240px; }
+      .gal-item:nth-child(1), .gal-item:nth-child(4) { grid-column: span 1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(247,243,238,0.98); padding: 24px; gap: 14px;
+      }
+      .nav-links.open a { color: var(--text) !important; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 50vh; }
+      .hero-left { padding: 100px 24px 50px; }
+      .hero-stats { gap: 24px; }
+      .categories-grid { grid-template-columns: 1fr 1fr; }
+      .cat-card { height: 280px; }
+      .products-grid, .test-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .gallery-grid .gal-item { height: 220px; }
+      .showroom-content { margin-left: 5%; }
+      .showroom-features { flex-direction: column; gap: 12px; }
+      .cta-inner { flex-direction: column; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .brands-logos { gap: 30px; }
+    }
+    @media (max-width: 480px) {
+      .categories-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .wsp-float span { display: none; }
+      .wsp-float { padding: 16px; border-radius: 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        Roble
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#showroom">Showroom</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="hero-badge"><span class="hero-badge-dot"></span> Fabricación propia · Envío a todo el país</div>
+        <h1>Muebles que transforman tu <span>hogar</span></h1>
+        <p class="hero-desc">Diseño contemporáneo, materiales nobles y fabricación artesanal argentina. Cada pieza pensada para durar generaciones.</p>
+        <div class="hero-btns">
+          <a href="#productos" class="btn btn-oak">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Ver catálogo
+          </a>
+          <a href="#showroom" class="btn btn-outline">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Visitar showroom
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-num">15+</div><div class="hero-stat-label">Años de experiencia</div></div>
+          <div><div class="hero-stat-num">8.000+</div><div class="hero-stat-label">Hogares amueblados</div></div>
+          <div><div class="hero-stat-num">4.8</div><div class="hero-stat-label">Rating en Google</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80" alt="Living moderno con muebles de diseño" />
+      <div class="hero-tag-float">
+        <strong>Living Escandinavo</strong>
+        <span>Colección Nordic 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Categorías</div>
+        <h2 class="section-title">Explorá por ambiente</h2>
+        <p class="section-desc">Muebles diseñados para cada espacio de tu hogar, con la calidad y el estilo que merecés.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="cat-card" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living" />
+          <div class="cat-overlay">
+            <h3 class="cat-name">Living</h3>
+            <span class="cat-count">42 productos</span>
+          </div>
+          <div class="cat-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+        <div class="cat-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Dormitorio" />
+          <div class="cat-overlay">
+            <h3 class="cat-name">Dormitorio</h3>
+            <span class="cat-count">35 productos</span>
+          </div>
+          <div class="cat-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+        <div class="cat-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Comedor" />
+          <div class="cat-overlay">
+            <h3 class="cat-name">Comedor</h3>
+            <span class="cat-count">28 productos</span>
+          </div>
+          <div class="cat-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+        <div class="cat-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=80" alt="Oficina" />
+          <div class="cat-overlay">
+            <h3 class="cat-name">Oficina</h3>
+            <span class="cat-count">24 productos</span>
+          </div>
+          <div class="cat-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="productos" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Destacados</div>
+        <h2 class="section-title">Los más elegidos</h2>
+        <p class="section-desc">Nuestros best sellers y las últimas incorporaciones al catálogo.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Sofá Nórdico" />
+            <span class="product-badge">Nuevo</span>
+            <button class="product-wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Living</div>
+            <h3 class="product-name">Sofá Nordic 3 Cuerpos</h3>
+            <p class="product-desc">Tapizado en lino natural, patas de roble macizo. Estructura reforzada con cinchas elásticas.</p>
+            <div class="product-bottom">
+              <div class="product-price">$890.000 <small>ARS</small></div>
+              <a href="#contacto" class="product-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Mesa Comedor" />
+            <span class="product-badge" style="background: var(--oak);">Best Seller</span>
+            <button class="product-wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Comedor</div>
+            <h3 class="product-name">Mesa Tulum 180 cm</h3>
+            <p class="product-desc">Tapa de paraíso macizo con bordes naturales. Base de hierro pintado al horno. 180x90 cm.</p>
+            <div class="product-bottom">
+              <div class="product-price">$720.000 <small>ARS</small></div>
+              <a href="#contacto" class="product-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=80" alt="Escritorio" />
+            <button class="product-wishlist"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Oficina</div>
+            <h3 class="product-name">Escritorio Oslo 140 cm</h3>
+            <p class="product-desc">Melamina roble con patas de metal negro. Pasacables integrado. Ideal para home office.</p>
+            <div class="product-bottom">
+              <div class="product-price">$385.000 <small>ARS</small></div>
+              <a href="#contacto" class="product-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Por qué elegirnos</div>
+        <h2 class="section-title">La diferencia Roble</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Fabricación propia</h3>
+          <p>Taller propio en Buenos Aires. Controlamos cada etapa del proceso para garantizar calidad superior.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
+          <h3>Materiales nobles</h3>
+          <p>Maderas macizas, herrajes importados y tapizados de primera calidad. Sin atajos, sin materiales baratos.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h3>Envío a todo el país</h3>
+          <p>Entrega profesional con embalaje reforzado. Servicio de armado incluido en CABA y GBA.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg></div>
+          <h3>Garantía 3 años</h3>
+          <p>Respaldamos cada mueble con garantía de fábrica. Servicio post-venta y mantenimiento incluido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWROOM -->
+  <section class="showroom-section" id="showroom">
+    <div class="showroom-content" data-aos="fade-up">
+      <div class="section-tag">Showroom</div>
+      <h2>Vení a ver, tocar y sentir</h2>
+      <p>500 m² de exhibición en el corazón de Palermo. Todos nuestros muebles están montados en ambientes reales para que puedas imaginarlos en tu hogar.</p>
+      <div class="showroom-features">
+        <div class="show-feat">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Lun-Sáb 10 a 20 hs
+        </div>
+        <div class="show-feat">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Av. Santa Fe 4800, Palermo
+        </div>
+        <div class="show-feat">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Estacionamiento gratis
+        </div>
+      </div>
+      <a href="#contacto" class="btn btn-oak">Agendar visita al showroom</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Galería</div>
+        <h2 class="section-title">Ambientes que inspiran</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gal-item" data-aos="fade-up"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Living moderno" /></div>
+        <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Dormitorio" /></div>
+        <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Comedor" /></div>
+        <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Sofá detalle" /></div>
+        <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=80" alt="Escritorio" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Opiniones</div>
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-text">"Amueblamos todo el departamento nuevo con Roble. La mesa Tulum es una obra de arte y el sofá Nordic es lo más cómodo que probé. Calidad premium, precios justos."</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="" class="test-avatar" />
+            <div><div class="test-name">Martín C.</div><div class="test-role">Buenos Aires</div></div>
+          </div>
+        </div>
+        <div class="test-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-text">"Compramos la biblioteca Andes y nos llegó a Córdoba en perfectas condiciones. El embalaje es impecable. Los muebles son tal cual se ven en las fotos. 100% recomendable."</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="" class="test-avatar" />
+            <div><div class="test-name">Florencia D.</div><div class="test-role">Córdoba</div></div>
+          </div>
+        </div>
+        <div class="test-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-text">"Lo que más me gustó es que fabrican todo ellos. Fui al showroom, elegí los materiales y me lo hicieron a medida. El resultado es exactamente lo que soñaba para mi oficina."</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="" class="test-avatar" />
+            <div><div class="test-name">Julieta R.</div><div class="test-role">Buenos Aires</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <div class="brands-bar">
+    <div class="container">
+      <div class="brands-label">Marcas que nos acompañan</div>
+      <div class="brands-logos">
+        <span class="brand-name">HAFELE</span>
+        <span class="brand-name">BLUM</span>
+        <span class="brand-name">MASISA</span>
+        <span class="brand-name">FAPLAC</span>
+        <span class="brand-name">GRASS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section contact-bg" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left" data-aos="fade-right">
+          <div class="section-tag" style="text-align: left;">Contacto</div>
+          <h2>Hablemos sobre tu proyecto</h2>
+          <p>Ya sea que busques un mueble puntual o quieras amueblar toda tu casa, estamos para asesorarte. Consultá sin compromiso.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon"><svg width="20" height="20" fill="#25D366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></div>
+              <div class="contact-method-text">
+                <strong>WhatsApp</strong>
+                <span><a href="https://wa.me/5491144XXXXXX?text=Hola!%20Quiero%20consultar%20sobre%20muebles" target="_blank">+54 11 44XX-XXXX</a></span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-method-text">
+                <strong>Email</strong>
+                <span>ventas@roblemuebles.com.ar</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div class="contact-method-text">
+                <strong>Showroom</strong>
+                <span>Av. Santa Fe 4800, Palermo — CABA</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+              <div class="contact-method-text">
+                <strong>Instagram</strong>
+                <span><a href="#">@roblemuebles</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map-form" data-aos="fade-left">
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0!2d-58.42!3d-34.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM0JzQ4LjAiUyA1OMKwMjUnMTIuMCJX!5e0!3m2!1ses!2sar!4v1" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="contact-form">
+            <h3>Envianos tu consulta</h3>
+            <form onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="form-group">
+                  <label>WhatsApp</label>
+                  <input type="tel" placeholder="+54 11 XXXX-XXXX" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="tu@email.com" required />
+              </div>
+              <div class="form-group">
+                <label>Categoría de interés</label>
+                <select>
+                  <option value="">Seleccioná...</option>
+                  <option>Living — Sofás, mesas ratonas, racks</option>
+                  <option>Dormitorio — Camas, respaldos, mesas de luz</option>
+                  <option>Comedor — Mesas, sillas, aparadores</option>
+                  <option>Oficina — Escritorios, bibliotecas</option>
+                  <option>Proyecto completo — Toda la casa</option>
+                  <option>Mueble a medida</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Mensaje</label>
+                <textarea placeholder="Contanos qué estás buscando..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Enviar consulta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-bar">
+    <div class="container">
+      <div class="cta-inner" data-aos="fade-up">
+        <div class="cta-text">
+          <h2>Financiación en hasta 12 cuotas sin interés</h2>
+          <p>Con todas las tarjetas. Consultá las promociones vigentes en nuestro showroom o por WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/5491144XXXXXX?text=Hola!%20Quiero%20consultar%20sobre%20financiación" class="btn btn-sage" target="_blank">
+          <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          Consultar financiación
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Roble Muebles</h3>
+          <p>Muebles de diseño con fabricación propia en Buenos Aires. Materiales nobles, diseño contemporáneo y calidad artesanal argentina desde 2011.</p>
+          <div class="footer-social">
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Categorías</h4>
+          <a href="#">Living</a>
+          <a href="#">Dormitorio</a>
+          <a href="#">Comedor</a>
+          <a href="#">Oficina</a>
+          <a href="#">Exterior</a>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Showroom</a>
+          <a href="#">Envíos</a>
+          <a href="#">Garantía</a>
+          <a href="#">Financiación</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="#">WhatsApp</a>
+          <a href="#">ventas@roblemuebles.com.ar</a>
+          <a href="#">Av. Santa Fe 4800, CABA</a>
+          <a href="#">Lun-Sáb 10 a 20 hs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Roble Muebles — Buenos Aires, Argentina</span>
+        <div class="footer-payments">Visa · Mastercard · Mercado Pago · Transferencia</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WSP -->
+  <a href="https://wa.me/5491144XXXXXX?text=Hola!%20Quiero%20consultar%20sobre%20muebles" class="wsp-float" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+    <span>Consultanos</span>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700, offset: 80 });
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.textContent = '¡Consulta enviada!';
+      btn.style.background = '#3D5A3E';
+      setTimeout(() => { btn.textContent = 'Enviar consulta'; btn.style.background = ''; e.target.reset(); }, 3000);
+    }
+  </script>
+</body>
+</html>

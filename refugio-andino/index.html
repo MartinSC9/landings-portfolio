@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refugio Andino — Cabañas Premium en Villa La Angostura, Patagonia</title>
+  <meta name="description" content="Cabañas de lujo frente al Lago Nahuel Huapi en Villa La Angostura. Jacuzzi, hogar a leña, tinaja y vistas únicas a la Cordillera de los Andes. Reservá tu escapada patagónica." />
+  <meta name="keywords" content="cabañas villa la angostura, alquiler cabañas patagonia, cabañas nahuel huapi, hospedaje villa la angostura, cabañas premium patagonia, alojamiento cerro bayo" />
+  <meta name="author" content="Refugio Andino" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1B3A4B" />
+  <link rel="canonical" href="https://refugioandino.com.ar" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Refugio Andino — Cabañas Premium en Villa La Angostura" />
+  <meta property="og:description" content="Cabañas de lujo frente al Lago Nahuel Huapi. Jacuzzi, hogar a leña y vistas únicas a la Cordillera. Reservá tu escapada patagónica." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1200&q=80" />
+  <meta property="og:url" content="https://refugioandino.com.ar" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Refugio Andino" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Refugio Andino — Cabañas Premium en Villa La Angostura" />
+  <meta name="twitter:description" content="Cabañas de lujo frente al Lago Nahuel Huapi. Jacuzzi, hogar a leña y vistas únicas." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1200&q=80" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=180&q=80" />
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Refugio Andino",
+    "description": "Cabañas premium en Villa La Angostura, Patagonia Argentina",
+    "url": "https://refugioandino.com.ar",
+    "telephone": "+54 294 4XX-XXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Camino al Cerro Bayo Km 4",
+      "addressLocality": "Villa La Angostura",
+      "addressRegion": "Neuquén",
+      "addressCountry": "AR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -40.76, "longitude": -71.65 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "520" },
+    "priceRange": "$$$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #1B3A4B;
+      --primary-light: #2E5A6B;
+      --secondary: #4A7C59;
+      --accent: #C8956C;
+      --accent-light: #E8B892;
+      --bg: #FAF8F5;
+      --bg-dark: #0F1C24;
+      --text: #1A1A1A;
+      --text-light: #6B7280;
+      --white: #FFFFFF;
+      --shadow: 0 4px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 16px 0;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+    .nav.scrolled {
+      background: rgba(15, 28, 36, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 10px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem; color: var(--white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: var(--white) !important;
+      padding: 10px 24px; border-radius: 50px;
+      font-weight: 600 !important;
+      transition: all 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 8px;
+    }
+    .nav-hamburger span {
+      width: 24px; height: 2px; background: white;
+      transition: all 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, rgba(15,28,36,0.7), rgba(15,28,36,0.4)),
+        url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1920&q=80') center/cover no-repeat;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 700px; padding: 0 24px;
+      margin: 0 auto 0 10%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+      padding: 8px 20px; border-radius: 50px;
+      color: var(--accent-light); font-size: 0.85rem; font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      color: var(--white); line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero p {
+      font-size: 1.15rem; color: rgba(255,255,255,0.8);
+      margin-bottom: 36px; max-width: 540px;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: 50px;
+      font-weight: 600; font-size: 1rem;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary { background: var(--accent); color: var(--white); }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(200,149,108,0.4); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      color: var(--white); font-size: 0.8rem; text-align: center;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--white);
+      margin-top: -50px; position: relative; z-index: 10;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 40px 48px;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1000px; margin-left: auto; margin-right: auto;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem; color: var(--primary);
+    }
+    .stat-number span { color: var(--accent); }
+    .stat-label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+    /* SECTIONS */
+    .section { padding: 100px 0; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-tag {
+      display: inline-block;
+      color: var(--accent); font-weight: 600; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--primary); margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 1.05rem; color: var(--text-light);
+      max-width: 600px; margin: 0 auto;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .about-images {
+      position: relative;
+    }
+    .about-img-main {
+      width: 100%; border-radius: var(--radius-lg);
+      object-fit: cover; height: 480px;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-img-float {
+      position: absolute; bottom: -30px; right: -30px;
+      width: 200px; height: 200px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-text h2 {
+      font-size: 2.5rem; color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      color: var(--text-light); margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+    .about-features {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-top: 32px;
+    }
+    .about-feature {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 500; font-size: 0.95rem;
+    }
+    .about-feature-icon {
+      width: 40px; height: 40px;
+      background: rgba(200,149,108,0.15);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); flex-shrink: 0;
+    }
+
+    /* CABINS */
+    .cabins-bg { background: var(--bg-dark); }
+    .cabins-bg .section-tag { color: var(--accent-light); }
+    .cabins-bg .section-title { color: var(--white); }
+    .cabins-bg .section-desc { color: rgba(255,255,255,0.6); }
+
+    .cabins-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .cabin-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .cabin-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .cabin-img-wrap { position: relative; overflow: hidden; height: 240px; }
+    .cabin-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .cabin-card:hover .cabin-img-wrap img { transform: scale(1.08); }
+    .cabin-badge {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--accent); color: var(--white);
+      padding: 4px 14px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600;
+    }
+    .cabin-info { padding: 28px; }
+    .cabin-name {
+      font-size: 1.5rem; color: var(--white);
+      margin-bottom: 8px;
+    }
+    .cabin-capacity {
+      color: rgba(255,255,255,0.5); font-size: 0.9rem;
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .cabin-amenities {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .cabin-amenity {
+      display: flex; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem;
+    }
+    .cabin-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cabin-price {
+      color: var(--accent-light); font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+    }
+    .cabin-price small { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .cabin-btn {
+      background: rgba(200,149,108,0.2); color: var(--accent-light);
+      padding: 10px 20px; border-radius: 50px;
+      font-weight: 600; font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .cabin-btn:hover { background: var(--accent); color: var(--white); }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 250px);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(transparent 50%, rgba(15,28,36,0.6));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* AMENITIES */
+    .amenities-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .amenity-card {
+      text-align: center; padding: 36px 20px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .amenity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .amenity-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, rgba(200,149,108,0.15), rgba(74,124,89,0.1));
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--accent);
+    }
+    .amenity-name { font-weight: 600; margin-bottom: 6px; }
+    .amenity-desc { font-size: 0.85rem; color: var(--text-light); }
+
+    /* EXPERIENCES */
+    .experiences-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .exp-card {
+      position: relative; border-radius: var(--radius-lg);
+      overflow: hidden; height: 360px;
+      cursor: pointer;
+    }
+    .exp-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .exp-card:hover img { transform: scale(1.06); }
+    .exp-content {
+      position: absolute; inset: 0;
+      background: linear-gradient(transparent 40%, rgba(15,28,36,0.85));
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 32px;
+    }
+    .exp-content h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 8px; }
+    .exp-content p { color: rgba(255,255,255,0.75); font-size: 0.9rem; }
+
+    /* TESTIMONIALS */
+    .testimonials-bg { background: linear-gradient(135deg, #f0ebe5, #faf8f5); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      padding: 36px; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testimonial-stars { color: #F59E0B; margin-bottom: 16px; font-size: 1.1rem; }
+    .testimonial-text {
+      font-size: 1rem; color: var(--text);
+      margin-bottom: 24px; font-style: italic;
+      line-height: 1.7;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .testimonial-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      object-fit: cover;
+    }
+    .testimonial-name { font-weight: 600; font-size: 0.95rem; }
+    .testimonial-loc { font-size: 0.8rem; color: var(--text-light); }
+    .testimonial-quote {
+      position: absolute; top: 20px; right: 28px;
+      font-size: 4rem; color: rgba(200,149,108,0.15);
+      font-family: 'DM Serif Display', serif; line-height: 1;
+    }
+
+    /* PRICING */
+    .pricing-table {
+      max-width: 800px; margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .pricing-row {
+      display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 20px 32px; align-items: center;
+    }
+    .pricing-header {
+      background: var(--primary); color: var(--white);
+      font-weight: 600; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .pricing-row:not(.pricing-header):nth-child(even) { background: #f9f7f4; }
+    .pricing-row span { font-size: 0.95rem; }
+    .pricing-highlight { color: var(--accent); font-weight: 700; }
+    .pricing-note {
+      text-align: center; padding: 24px;
+      font-size: 0.85rem; color: var(--text-light);
+    }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid #e5e1db;
+      padding: 24px 0;
+    }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; font-weight: 600; font-size: 1.05rem;
+      color: var(--primary); background: none; border: none;
+      width: 100%; text-align: left;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-chevron { transition: transform 0.3s; font-size: 1.2rem; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      color: var(--text-light); font-size: 0.95rem; line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-top: 16px; }
+
+    /* LOCATION */
+    .location-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .location-map {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-lg); height: 400px;
+    }
+    .location-map iframe { width: 100%; height: 100%; border: 0; }
+    .location-info h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 16px; }
+    .location-info p { color: var(--text-light); margin-bottom: 24px; }
+    .location-distances { display: flex; flex-direction: column; gap: 16px; }
+    .distance-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .distance-icon {
+      width: 42px; height: 42px;
+      background: rgba(200,149,108,0.15);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); flex-shrink: 0;
+    }
+    .distance-text strong { display: block; font-size: 0.95rem; }
+    .distance-text span { font-size: 0.8rem; color: var(--text-light); }
+
+    /* CONTACT / FORM */
+    .contact-bg {
+      background: linear-gradient(135deg, var(--bg-dark), #1a2e3a);
+      position: relative; overflow: hidden;
+    }
+    .contact-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=60') center/cover;
+      opacity: 0.08;
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; position: relative; z-index: 2;
+    }
+    .contact-left h2 {
+      font-size: 2.5rem; color: var(--white); margin-bottom: 16px;
+    }
+    .contact-left p {
+      color: rgba(255,255,255,0.65); margin-bottom: 40px; font-size: 1.05rem;
+    }
+    .contact-methods { display: flex; flex-direction: column; gap: 20px; }
+    .contact-method {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .contact-method-icon {
+      width: 50px; height: 50px;
+      background: rgba(200,149,108,0.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent-light);
+    }
+    .contact-method-text { color: rgba(255,255,255,0.8); }
+    .contact-method-text strong { display: block; color: var(--white); }
+
+    .contact-form {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .contact-form h3 {
+      color: var(--white); font-size: 1.5rem; margin-bottom: 28px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; color: rgba(255,255,255,0.7);
+      font-size: 0.85rem; font-weight: 500; margin-bottom: 8px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.12);
+    }
+    .form-group select option { background: var(--bg-dark); color: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%; padding: 16px;
+      background: var(--accent); color: var(--white);
+      border: none; border-radius: 50px;
+      font-weight: 600; font-size: 1rem;
+      cursor: pointer; transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-submit:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--accent), #a87650);
+      text-align: center; padding: 80px 24px;
+    }
+    .cta-banner h2 { font-size: 2.5rem; color: var(--white); margin-bottom: 16px; }
+    .cta-banner p { color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 32px; }
+    .btn-white { background: var(--white); color: var(--primary); }
+    .btn-white:hover { background: #f0ebe5; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+    /* FOOTER */
+    .footer {
+      background: var(--bg-dark); padding: 60px 0 30px; color: rgba(255,255,255,0.6);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-brand h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 12px; }
+    .footer-brand h3 span { color: var(--accent); }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 40px; height: 40px;
+      border-radius: 10px; background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); text-decoration: none;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover { background: var(--accent); color: var(--white); }
+    .footer-col h4 { color: var(--white); font-size: 1rem; margin-bottom: 20px; }
+    .footer-col a {
+      display: block; color: rgba(255,255,255,0.5);
+      text-decoration: none; font-size: 0.9rem;
+      padding: 4px 0; transition: color 0.3s;
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px; text-align: center;
+      font-size: 0.8rem;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed; bottom: 28px; right: 28px;
+      z-index: 999;
+      width: 60px; height: 60px;
+      background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+    .whatsapp-tooltip {
+      position: absolute; right: 72px; top: 50%; transform: translateY(-50%);
+      background: var(--white); color: var(--text);
+      padding: 10px 18px; border-radius: 10px;
+      font-size: 0.85rem; font-weight: 500;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+      opacity: 0; transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .cabins-grid { grid-template-columns: repeat(2, 1fr); }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 200px); }
+      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(15,28,36,0.98); padding: 24px;
+        gap: 16px;
+      }
+      .hero-content { margin: 0 auto; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .hero p { margin: 0 auto 36px; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); margin-top: -30px; padding: 24px; }
+      .about-grid, .location-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-img-float { display: none; }
+      .cabins-grid, .experiences-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 180px); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .pricing-row { grid-template-columns: 1fr 1fr; gap: 8px; padding: 16px 20px; font-size: 0.85rem; }
+    }
+    @media (max-width: 480px) {
+      .stats-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .amenities-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .gallery-item:nth-child(1) { grid-column: span 1; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.92);
+      display: none; align-items: center; justify-content: center;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 8px; }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 32px;
+      color: white; font-size: 2rem; cursor: pointer;
+      background: none; border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Refugio <span>Andino</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#cabanas">Cabañas</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#tarifas">Tarifas</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-cta">Reservar</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Villa La Angostura, Patagonia
+      </div>
+      <h1>Tu refugio de <em>ensueño</em> frente al lago</h1>
+      <p>Cabañas de montaña con vistas únicas al Lago Nahuel Huapi y la Cordillera de los Andes. Desconectate del mundo y conectá con la naturaleza.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Reservar ahora
+        </a>
+        <a href="#cabanas" class="btn btn-outline">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Ver cabañas
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      <br />Descubrí más
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar container" data-aos="fade-up" data-aos-delay="200">
+    <div class="stat">
+      <div class="stat-number">12<span>+</span></div>
+      <div class="stat-label">Años de experiencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">3.500<span>+</span></div>
+      <div class="stat-label">Huéspedes felices</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">4.9<span>★</span></div>
+      <div class="stat-label">Rating en Google</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Cabañas exclusivas</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images" data-aos="fade-right" data-aos-duration="800">
+          <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800&q=80" alt="Cabaña exterior" class="about-img-main" />
+          <img src="https://images.unsplash.com/photo-1520984032042-162d526883e0?w=400&q=80" alt="Vista interior" class="about-img-float" />
+        </div>
+        <div class="about-text" data-aos="fade-left" data-aos-duration="800">
+          <div class="section-tag">Nuestra historia</div>
+          <h2>Más de una década creando momentos inolvidables</h2>
+          <p>Refugio Andino nació en 2014 con una visión clara: ofrecer un espacio donde la comodidad premium se fusione con la naturaleza patagónica más pura. Ubicadas en un predio de 3 hectáreas de bosque nativo, nuestras cabañas fueron diseñadas para quienes buscan una experiencia única.</p>
+          <p>Cada detalle fue pensado con amor: desde la madera de lenga de nuestros revestimientos hasta las vistas panorámicas que enmarcan cada ventana.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              Entorno protegido
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              Atención familiar
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              Eco-friendly
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              Calidad premium
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CABINS -->
+  <section class="section cabins-bg" id="cabanas">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Nuestras cabañas</div>
+        <h2 class="section-title">Elegí tu experiencia patagónica</h2>
+        <p class="section-desc">Cada cabaña fue diseñada para ofrecer privacidad, confort y vistas que quitan el aliento.</p>
+      </div>
+      <div class="cabins-grid">
+        <div class="cabin-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cabin-img-wrap">
+            <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80" alt="Cabaña Arrayán" />
+            <span class="cabin-badge">Popular</span>
+          </div>
+          <div class="cabin-info">
+            <h3 class="cabin-name">Cabaña Arrayán</h3>
+            <div class="cabin-capacity">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              2 personas · 1 dormitorio
+            </div>
+            <div class="cabin-amenities">
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 2.5-8 7s8 13 8 13 8-8.5 8-13-4-7-8-7z"/></svg> Jacuzzi</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"/></svg> Hogar a leña</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> Smart TV</span>
+            </div>
+            <div class="cabin-bottom">
+              <div class="cabin-price">$95.000 <small>/noche</small></div>
+              <a href="#contacto" class="cabin-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="cabin-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="cabin-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518732714860-b62714ce0c59?w=600&q=80" alt="Cabaña Coihue" />
+            <span class="cabin-badge">Premium</span>
+          </div>
+          <div class="cabin-info">
+            <h3 class="cabin-name">Cabaña Coihue</h3>
+            <div class="cabin-capacity">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              4 personas · 2 dormitorios
+            </div>
+            <div class="cabin-amenities">
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 2.5-8 7s8 13 8 13 8-8.5 8-13-4-7-8-7z"/></svg> Tinaja</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"/></svg> Hogar a leña</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg> Vista al lago</span>
+            </div>
+            <div class="cabin-bottom">
+              <div class="cabin-price">$145.000 <small>/noche</small></div>
+              <a href="#contacto" class="cabin-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="cabin-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cabin-img-wrap">
+            <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=600&q=80" alt="Cabaña Lenga" />
+            <span class="cabin-badge">Exclusiva</span>
+          </div>
+          <div class="cabin-info">
+            <h3 class="cabin-name">Cabaña Lenga</h3>
+            <div class="cabin-capacity">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              6 personas · 3 dormitorios
+            </div>
+            <div class="cabin-amenities">
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 2.5-8 7s8 13 8 13 8-8.5 8-13-4-7-8-7z"/></svg> Jacuzzi + Tinaja</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"/></svg> Quincho</span>
+              <span class="cabin-amenity"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Sauna</span>
+            </div>
+            <div class="cabin-bottom">
+              <div class="cabin-price">$220.000 <small>/noche</small></div>
+              <a href="#contacto" class="cabin-btn">Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Galería</div>
+        <h2 class="section-title">Imágenes que hablan por sí solas</h2>
+        <p class="section-desc">Explorá cada rincón de nuestro refugio patagónico.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1000&q=80" alt="Vista panorámica lago y montañas" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1595521624992-48a59aef95e3?w=600&q=80" alt="Interior cabaña" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1520984032042-162d526883e0?w=600&q=80" alt="Living con hogar" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=600&q=80" alt="Deck con vista" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Atardecer patagónico" />
+          <div class="gallery-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="section" id="servicios" style="background: linear-gradient(135deg, #f0ebe5, #faf8f5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Servicios y amenities</div>
+        <h2 class="section-title">Todo lo que necesitás para disfrutar</h2>
+        <p class="section-desc">Equipamos cada cabaña con amenities premium para que tu estadía sea perfecta.</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 2.5-8 7s8 13 8 13 8-8.5 8-13-4-7-8-7z"/></svg></div>
+          <div class="amenity-name">Jacuzzi / Tinaja</div>
+          <div class="amenity-desc">Agua caliente bajo las estrellas patagónicas</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"/></svg></div>
+          <div class="amenity-name">Hogar a leña</div>
+          <div class="amenity-desc">Leña incluida para tus noches junto al fuego</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></div>
+          <div class="amenity-name">WiFi de alta velocidad</div>
+          <div class="amenity-desc">Conectividad en todas las cabañas</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+          <div class="amenity-name">Smart TV</div>
+          <div class="amenity-desc">Netflix, Disney+ y más incluidos</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <div class="amenity-name">Desayuno incluido</div>
+          <div class="amenity-desc">Productos regionales cada mañana</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="amenity-name">Estacionamiento</div>
+          <div class="amenity-desc">Cochera techada privada por cabaña</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg></div>
+          <div class="amenity-name">Ropa blanca</div>
+          <div class="amenity-desc">Toallas y sábanas de algodón premium</div>
+        </div>
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
+          <div class="amenity-name">Pet Friendly</div>
+          <div class="amenity-desc">Tu mascota también es bienvenida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section class="section" id="experiencias">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Experiencias</div>
+        <h2 class="section-title">Viví la Patagonia de verdad</h2>
+        <p class="section-desc">Actividades para todos los gustos, en cualquier estación del año.</p>
+      </div>
+      <div class="experiences-grid">
+        <div class="exp-card" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Trekking" />
+          <div class="exp-content">
+            <h3>Trekking & Senderismo</h3>
+            <p>Senderos entre bosques milenarios y miradores con vistas al lago y los volcanes.</p>
+          </div>
+        </div>
+        <div class="exp-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?w=600&q=80" alt="Ski" />
+          <div class="exp-content">
+            <h3>Esquí en Cerro Bayo</h3>
+            <p>A solo 15 minutos del complejo. Nieve de junio a octubre con vistas al Nahuel Huapi.</p>
+          </div>
+        </div>
+        <div class="exp-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Kayak" />
+          <div class="exp-content">
+            <h3>Kayak & Navegación</h3>
+            <p>Recorridos en kayak por el Brazo Huemul y excursiones lacustres al Bosque de Arrayanes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-bg">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Opiniones</div>
+        <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
+        <p class="section-desc">Más de 500 reseñas con un promedio de 4.9 estrellas.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">Un lugar mágico. La cabaña Coihue tiene una vista al lago que no tiene comparación. El desayuno con productos regionales fue un detalle hermoso. Volvemos seguro.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="María L." class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">María L.</div>
+              <div class="testimonial-loc">Buenos Aires, Argentina</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">Fuimos en invierno y fue increíble. La tinaja con nieve cayendo alrededor es algo que no te olvidás más. La atención de los dueños es impecable.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Gonzalo R." class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">Gonzalo R.</div>
+              <div class="testimonial-loc">Rosario, Argentina</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">La mejor experiencia de hospedaje que tuvimos en la Patagonia. La Cabaña Lenga es espectacular para familias. Los chicos no querían irse. 100% recomendable.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Carolina y Martín" class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">Carolina y Martín</div>
+              <div class="testimonial-loc">Córdoba, Argentina</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="tarifas">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Tarifas 2026</div>
+        <h2 class="section-title">Tarifas por noche</h2>
+        <p class="section-desc">Precios en pesos argentinos. Incluyen desayuno, ropa blanca y estacionamiento.</p>
+      </div>
+      <div class="pricing-table" data-aos="fade-up">
+        <div class="pricing-row pricing-header">
+          <span>Cabaña</span>
+          <span>Temp. Baja</span>
+          <span>Temp. Alta</span>
+          <span>Especial</span>
+        </div>
+        <div class="pricing-row">
+          <span><strong>Arrayán</strong> (2 pers.)</span>
+          <span>$75.000</span>
+          <span class="pricing-highlight">$95.000</span>
+          <span>$120.000</span>
+        </div>
+        <div class="pricing-row">
+          <span><strong>Coihue</strong> (4 pers.)</span>
+          <span>$110.000</span>
+          <span class="pricing-highlight">$145.000</span>
+          <span>$185.000</span>
+        </div>
+        <div class="pricing-row">
+          <span><strong>Lenga</strong> (6 pers.)</span>
+          <span>$170.000</span>
+          <span class="pricing-highlight">$220.000</span>
+          <span>$280.000</span>
+        </div>
+        <div class="pricing-note">
+          <strong>Temp. Baja:</strong> Mar-Jun, Ago-Nov &nbsp;|&nbsp; <strong>Temp. Alta:</strong> Dic-Feb, Jul &nbsp;|&nbsp; <strong>Especial:</strong> Semana Santa, Fiestas, Feriados largos<br>
+          Estadías de 5+ noches: 10% de descuento · Estadías de 7+ noches: 15% de descuento
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section" id="ubicacion" style="background: linear-gradient(135deg, #f0ebe5, #faf8f5);">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-map" data-aos="fade-right">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46756.2!2d-71.65!3d-40.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf2f7038e7ed%3A0x4030e3c1b1e5e0!2sVilla+La+Angostura!5e0!3m2!1ses!2sar!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="location-info" data-aos="fade-left">
+          <div class="section-tag">Ubicación</div>
+          <h2>Cómo llegar a Refugio Andino</h2>
+          <p>Estamos ubicados en el Km 4 del Camino al Cerro Bayo, Villa La Angostura, Neuquén. Un entorno privilegiado rodeado de bosque nativo con acceso directo al lago.</p>
+          <div class="location-distances">
+            <div class="distance-item">
+              <div class="distance-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="distance-text"><strong>Centro de Villa La Angostura</strong><span>4 km · 8 minutos en auto</span></div>
+            </div>
+            <div class="distance-item">
+              <div class="distance-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+              <div class="distance-text"><strong>Cerro Bayo (ski)</strong><span>8 km · 15 minutos en auto</span></div>
+            </div>
+            <div class="distance-item">
+              <div class="distance-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+              <div class="distance-text"><strong>Aeropuerto Bariloche</strong><span>82 km · 1 hora 15 min</span></div>
+            </div>
+            <div class="distance-item">
+              <div class="distance-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <div class="distance-text"><strong>Bosque de Arrayanes</strong><span>12 km · Excursión lacustre</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Preguntas frecuentes</div>
+        <h2 class="section-title">Resolvé tus dudas</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Cómo reservo una cabaña?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">Podés reservar enviándonos un mensaje por WhatsApp, completando el formulario de contacto o llamándonos. Una vez confirmada la disponibilidad, te enviamos los datos para realizar la seña del 40% por transferencia bancaria o Mercado Pago.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuáles son los horarios de check-in y check-out?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">El check-in es a partir de las 15:00 hs y el check-out hasta las 10:30 hs. Si necesitás flexibilidad, consultanos y vemos cómo acomodarnos.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Aceptan mascotas?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">¡Sí! Somos pet-friendly. Aceptamos mascotas en todas las cabañas sin cargo adicional. Solo pedimos que estén al día con las vacunas.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuál es la política de cancelación?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">Cancelación gratuita hasta 15 días antes del check-in con devolución total de la seña. Entre 15 y 7 días, devolución del 50%. Menos de 7 días, no se realiza devolución. En caso de fuerza mayor, ofrecemos reprogramación sin cargo.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Qué medios de pago aceptan?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">Aceptamos transferencia bancaria, Mercado Pago, efectivo y tarjetas de débito/crédito (con recargo). La seña se abona por transferencia y el saldo restante al momento del check-in.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Tienen estacionamiento?
+            <span class="faq-chevron">&#9662;</span>
+          </button>
+          <div class="faq-answer">Sí, cada cabaña cuenta con estacionamiento techado privado sin cargo adicional.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-bg" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left" data-aos="fade-right">
+          <div class="section-tag" style="color: var(--accent-light);">Contacto</div>
+          <h2>Reservá tu escapada patagónica</h2>
+          <p>Completá el formulario o escribinos directamente. Respondemos en menos de 2 horas durante el horario de atención.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+              </div>
+              <div class="contact-method-text">
+                <strong>WhatsApp</strong>
+                +54 294 4XX-XXXX
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-method-text">
+                <strong>Teléfono</strong>
+                +54 294 4XX-XXXX
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-method-text">
+                <strong>Email</strong>
+                info@refugioandino.com.ar
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div class="contact-method-text">
+                <strong>Instagram</strong>
+                @refugioandino.vla
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form" data-aos="fade-left">
+          <h3>Consultá disponibilidad</h3>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono / WhatsApp</label>
+                <input type="tel" placeholder="+54 11 XXXX-XXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Fecha de ingreso</label>
+                <input type="date" required />
+              </div>
+              <div class="form-group">
+                <label>Fecha de egreso</label>
+                <input type="date" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Cantidad de personas</label>
+                <select required>
+                  <option value="">Seleccioná...</option>
+                  <option>1 persona</option>
+                  <option>2 personas</option>
+                  <option>3 personas</option>
+                  <option>4 personas</option>
+                  <option>5 personas</option>
+                  <option>6 personas</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Cabaña de interés</label>
+                <select>
+                  <option value="">Cualquiera</option>
+                  <option>Arrayán (2 pers.)</option>
+                  <option>Coihue (4 pers.)</option>
+                  <option>Lenga (6 pers.)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Mensaje (opcional)</label>
+              <textarea placeholder="Contanos si tenés algún requerimiento especial..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Enviar consulta
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container" data-aos="zoom-in">
+      <h2>¿Listo para tu aventura patagónica?</h2>
+      <p>Reservá ahora y asegurá las mejores fechas. Estadías de 5+ noches con descuento especial.</p>
+      <a href="https://wa.me/5429441234567?text=Hola!%20Quiero%20consultar%20disponibilidad%20en%20Refugio%20Andino" class="btn btn-white" target="_blank">
+        <svg width="20" height="20" fill="#25D366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Refugio <span>Andino</span></h3>
+          <p>Cabañas premium en Villa La Angostura, Patagonia Argentina. Tu lugar para desconectar, descansar y conectar con la naturaleza más pura de la Cordillera de los Andes.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="TripAdvisor"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Cabañas</h4>
+          <a href="#cabanas">Arrayán</a>
+          <a href="#cabanas">Coihue</a>
+          <a href="#cabanas">Lenga</a>
+          <a href="#tarifas">Tarifas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Experiencias</h4>
+          <a href="#experiencias">Trekking</a>
+          <a href="#experiencias">Esquí</a>
+          <a href="#experiencias">Kayak</a>
+          <a href="#galeria">Galería</a>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <a href="#ubicacion">Cómo llegar</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Refugio Andino — Villa La Angostura, Neuquén, Argentina. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5429441234567?text=Hola!%20Quiero%20consultar%20disponibilidad%20en%20Refugio%20Andino" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+    <span class="whatsapp-tooltip">Chateá con nosotros</span>
+  </a>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Imagen ampliada" id="lightboxImg" />
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({ once: true, duration: 700, offset: 80 });
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // FAQ
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      document.querySelectorAll('.faq-item').forEach(i => {
+        if (i !== item) i.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    }
+
+    // Lightbox
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeLightbox();
+    });
+
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-number');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const text = el.textContent;
+          const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+          if (isNaN(num)) return;
+          const suffix = text.replace(/[0-9.,]/g, '');
+          let current = 0;
+          const increment = num / 60;
+          const isDecimal = text.includes('.');
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= num) {
+              current = num;
+              clearInterval(timer);
+            }
+            el.innerHTML = (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString('es-AR')) + suffix;
+          }, 25);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.textContent = '¡Consulta enviada!';
+      btn.style.background = '#4A7C59';
+      setTimeout(() => {
+        btn.textContent = 'Enviar consulta';
+        btn.style.background = '';
+        e.target.reset();
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

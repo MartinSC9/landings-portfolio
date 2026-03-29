@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Valentina — Diseño de Modas | Alta Costura & Prêt-à-Porter</title>
+  <meta name="description" content="Atelier de diseño de modas en Buenos Aires. Alta costura, vestidos de novia, diseño a medida y asesoramiento de imagen. Moda argentina con identidad propia desde 2011." />
+  <meta name="keywords" content="diseño de modas buenos aires, alta costura argentina, vestidos de novia a medida, atelier palermo, diseñadora de moda, prêt-à-porter argentino, asesoramiento de imagen" />
+  <meta name="author" content="Atelier Valentina" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://ateliervalentina.com.ar" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atelier Valentina — Diseño de Modas | Alta Costura" />
+  <meta property="og:description" content="Alta costura, vestidos de novia, diseño a medida y colecciones exclusivas. Moda argentina con identidad propia." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80" />
+  <meta property="og:url" content="https://ateliervalentina.com.ar" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Atelier Valentina" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Atelier Valentina — Diseño de Modas | Alta Costura" />
+  <meta name="twitter:description" content="Alta costura, vestidos de novia y diseño a medida en Buenos Aires." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=180&q=80" />
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Atelier Valentina",
+    "description": "Atelier de diseño de modas, alta costura y vestidos de novia en Buenos Aires",
+    "url": "https://ateliervalentina.com.ar",
+    "telephone": "+54 11 55XX-XXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Honduras 4832",
+      "addressLocality": "Palermo Soho",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHours": "Mo-Fr 10:00-19:00",
+    "priceRange": "$$$$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0A0A0A;
+      --black-light: #1A1A1A;
+      --charcoal: #2D2D2D;
+      --gold: #C9A96E;
+      --gold-light: #DFC494;
+      --gold-dark: #A8843E;
+      --cream: #F8F5F0;
+      --cream-dark: #EDE8E0;
+      --white: #FFFFFF;
+      --text: #333333;
+      --text-light: #8A8A8A;
+      --rose: #C4A08A;
+      --shadow: 0 4px 30px rgba(0,0,0,0.06);
+      --shadow-lg: 0 16px 50px rgba(0,0,0,0.1);
+      --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    img { display: block; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 20px 0; transition: all 0.4s;
+    }
+    .nav.scrolled {
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+      padding: 12px 0; box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 300; letter-spacing: 4px;
+      text-transform: uppercase; text-decoration: none;
+      color: var(--white); transition: color 0.4s;
+    }
+    .nav.scrolled .nav-logo { color: var(--black); }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 2px;
+      text-transform: uppercase; transition: color 0.3s;
+    }
+    .nav.scrolled .nav-links a { color: var(--text); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      border: 1px solid var(--gold) !important;
+      padding: 10px 24px !important;
+      color: var(--gold) !important;
+      transition: all 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .nav-hamburger span { width: 24px; height: 1.5px; background: white; transition: all 0.3s; }
+    .nav.scrolled .nav-hamburger span { background: var(--black); }
+
+    /* HERO */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(rgba(10,10,10,0.5), rgba(10,10,10,0.3)),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80') center/cover no-repeat;
+      text-align: center;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 24px; }
+    .hero-line {
+      width: 60px; height: 1px; background: var(--gold);
+      margin: 0 auto 24px;
+    }
+    .hero-tag {
+      font-size: 0.82rem; letter-spacing: 6px; text-transform: uppercase;
+      color: var(--gold); font-weight: 500; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      color: var(--white); line-height: 1.1;
+      font-weight: 300; letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.7);
+      max-width: 550px; margin: 0 auto 40px;
+      font-weight: 300; line-height: 1.8;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 36px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none;
+      border: none; cursor: pointer; transition: all 0.4s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .btn-gold { background: var(--gold); color: var(--white); }
+    .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,169,110,0.3); }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.4); }
+    .btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 50px; background: linear-gradient(transparent, var(--gold));
+      animation: scrollLine 2s infinite;
+    }
+    @keyframes scrollLine {
+      0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* MARQUEE */
+    .marquee-bar {
+      background: var(--black); padding: 14px 0; overflow: hidden;
+    }
+    .marquee-track {
+      display: flex; gap: 60px; animation: marquee 30s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 16px;
+      color: var(--gold); font-size: 0.75rem; letter-spacing: 4px;
+      text-transform: uppercase; font-weight: 500; white-space: nowrap;
+    }
+    .marquee-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+
+    /* SECTIONS */
+    .section { padding: 110px 0; }
+    .section-header { text-align: center; margin-bottom: 72px; }
+    .section-tag {
+      font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 16px;
+      display: block;
+    }
+    .section-title {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: var(--black); line-height: 1.2;
+      font-weight: 300;
+    }
+    .section-desc {
+      font-size: 0.95rem; color: var(--text-light); max-width: 560px;
+      margin: 16px auto 0; font-weight: 300; line-height: 1.8;
+    }
+    .section-line { width: 50px; height: 1px; background: var(--gold); margin: 20px auto 0; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .about-images { position: relative; }
+    .about-img-1 {
+      width: 80%; height: 550px; object-fit: cover;
+    }
+    .about-img-2 {
+      position: absolute; bottom: -40px; right: 0;
+      width: 55%; height: 320px; object-fit: cover;
+      border: 8px solid var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-text .section-tag { text-align: left; }
+    .about-text h2 {
+      font-size: 2.8rem; color: var(--black);
+      line-height: 1.15; margin-bottom: 24px; font-weight: 300;
+    }
+    .about-text h2 em { font-style: italic; color: var(--gold); }
+    .about-text p { color: var(--text-light); font-weight: 300; margin-bottom: 16px; line-height: 1.8; }
+    .about-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.5rem;
+      color: var(--gold); margin-top: 28px;
+    }
+
+    /* COLLECTIONS */
+    .collections-bg { background: var(--cream); }
+    .collections-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .collection-card {
+      position: relative; overflow: hidden; cursor: pointer;
+      background: var(--white);
+    }
+    .collection-img { position: relative; overflow: hidden; height: 480px; }
+    .collection-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .collection-card:hover .collection-img img { transform: scale(1.06); }
+    .collection-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(transparent 50%, rgba(10,10,10,0.7));
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 32px; opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .collection-card:hover .collection-overlay { opacity: 1; }
+    .collection-overlay h3 {
+      font-size: 1.8rem; color: var(--white);
+      margin-bottom: 6px; font-weight: 300;
+    }
+    .collection-overlay span {
+      color: var(--gold-light); font-size: 0.78rem;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .collection-info { padding: 24px; text-align: center; }
+    .collection-info h3 { font-size: 1.4rem; color: var(--black); margin-bottom: 4px; }
+    .collection-info span {
+      font-size: 0.78rem; color: var(--text-light);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .service-card {
+      text-align: center; padding: 48px 24px;
+      border: 1px solid #eee;
+      transition: all 0.4s;
+    }
+    .service-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-icon {
+      width: 56px; height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--gold);
+    }
+    .service-card h3 {
+      font-size: 1.3rem; color: var(--black);
+      margin-bottom: 10px; font-weight: 400;
+    }
+    .service-card p { font-size: 0.85rem; color: var(--text-light); font-weight: 300; line-height: 1.7; }
+
+    /* GALLERY SPLIT */
+    .gallery-split {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+    .gallery-left {
+      display: grid; grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+    }
+    .gallery-left img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s; cursor: pointer; }
+    .gallery-left img:hover { opacity: 0.85; }
+    .gallery-right {
+      position: relative; overflow: hidden;
+    }
+    .gallery-right img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-right-content {
+      position: absolute; inset: 0;
+      background: linear-gradient(transparent 40%, rgba(10,10,10,0.8));
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 48px;
+    }
+    .gallery-right-content h2 {
+      font-size: 2.5rem; color: var(--white);
+      font-weight: 300; margin-bottom: 12px;
+    }
+    .gallery-right-content p {
+      color: rgba(255,255,255,0.7); font-weight: 300;
+      margin-bottom: 24px; max-width: 400px;
+    }
+    .btn-outline-gold {
+      background: transparent; color: var(--gold);
+      border: 1px solid var(--gold);
+      display: inline-flex; width: fit-content;
+    }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--white); }
+
+    /* PROCESS / TIMELINE */
+    .process-bg { background: var(--black); }
+    .process-bg .section-title { color: var(--white); }
+    .process-bg .section-desc { color: rgba(255,255,255,0.4); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 40px; margin-top: 60px;
+    }
+    .process-step { text-align: center; position: relative; }
+    .process-step::after {
+      content: ''; position: absolute; top: 32px; right: -20px;
+      width: 40px; height: 1px; background: rgba(255,255,255,0.15);
+    }
+    .process-step:last-child::after { display: none; }
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; color: var(--gold); font-weight: 300;
+      line-height: 1; margin-bottom: 16px;
+    }
+    .process-step h3 {
+      font-size: 1.2rem; color: var(--white);
+      margin-bottom: 10px; font-weight: 400;
+    }
+    .process-step p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.4);
+      font-weight: 300; line-height: 1.7;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-bg { background: var(--cream); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .test-card {
+      background: var(--white); padding: 40px;
+      border: 1px solid #eee;
+      transition: all 0.3s;
+    }
+    .test-card:hover { box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .test-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; color: var(--gold); line-height: 1;
+      margin-bottom: 8px;
+    }
+    .test-text {
+      font-size: 0.95rem; color: var(--text);
+      font-style: italic; font-weight: 300;
+      line-height: 1.8; margin-bottom: 24px;
+    }
+    .test-author { display: flex; align-items: center; gap: 14px; }
+    .test-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      object-fit: cover;
+    }
+    .test-name { font-weight: 600; font-size: 0.88rem; }
+    .test-role { font-size: 0.78rem; color: var(--text-light); }
+
+    /* PRESS */
+    .press-logos {
+      display: flex; justify-content: center; align-items: center;
+      gap: 60px; flex-wrap: wrap;
+      opacity: 0.4;
+    }
+    .press-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 600;
+      color: var(--black); letter-spacing: 2px;
+    }
+
+    /* INSTAGRAM FEED */
+    .insta-section { padding: 80px 0 0; overflow: hidden; }
+    .insta-header { text-align: center; margin-bottom: 40px; }
+    .insta-header h2 { font-size: 2rem; color: var(--black); font-weight: 300; }
+    .insta-header a {
+      color: var(--gold); text-decoration: none; font-size: 0.82rem;
+      letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+    }
+    .insta-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr);
+    }
+    .insta-item { position: relative; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
+    .insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .insta-item:hover img { transform: scale(1.08); }
+    .insta-overlay {
+      position: absolute; inset: 0;
+      background: rgba(201,169,110,0.8);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .insta-item:hover .insta-overlay { opacity: 1; }
+    .insta-overlay svg { width: 28px; height: 28px; color: white; }
+
+    /* CONTACT */
+    .contact-section { background: var(--cream); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start;
+    }
+    .contact-left h2 {
+      font-size: 2.8rem; color: var(--black);
+      font-weight: 300; margin-bottom: 16px;
+    }
+    .contact-left h2 em { font-style: italic; color: var(--gold); }
+    .contact-left > p { color: var(--text-light); font-weight: 300; margin-bottom: 40px; line-height: 1.8; }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-item-icon { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+    .contact-item-text strong { display: block; font-size: 0.85rem; margin-bottom: 2px; }
+    .contact-item-text span { color: var(--text-light); font-size: 0.9rem; font-weight: 300; }
+    .contact-item-text a { color: var(--text); text-decoration: none; }
+
+    .contact-form {
+      background: var(--white); padding: 48px;
+      border: 1px solid #eee;
+    }
+    .contact-form h3 {
+      font-size: 1.6rem; color: var(--black); font-weight: 300;
+      margin-bottom: 32px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text); margin-bottom: 10px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 0;
+      border: none; border-bottom: 1px solid #ddd;
+      font-family: 'Montserrat'; font-size: 0.92rem;
+      color: var(--text); background: transparent;
+      transition: border-color 0.3s;
+      font-weight: 300;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--gold);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; border: 1px solid #ddd; padding: 14px; margin-top: 4px; }
+    .form-submit {
+      width: 100%; padding: 16px;
+      background: var(--black); color: var(--white);
+      border: none; font-family: 'Montserrat';
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .form-submit:hover { background: var(--gold); }
+
+    /* CTA */
+    .cta-section {
+      position: relative; min-height: 500px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.6)),
+        url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=80') center/cover no-repeat;
+    }
+    .cta-content h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      color: var(--white); font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .cta-content h2 em { font-style: italic; color: var(--gold-light); }
+    .cta-content p {
+      color: rgba(255,255,255,0.6); font-weight: 300;
+      margin-bottom: 32px; font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    .footer { background: var(--black); padding: 60px 0 30px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; color: var(--white);
+      font-weight: 300; letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 300; line-height: 1.7; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col h4 {
+      color: var(--white); font-family: 'Montserrat';
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block; color: rgba(255,255,255,0.4);
+      text-decoration: none; font-size: 0.88rem;
+      padding: 4px 0; transition: color 0.3s; font-weight: 300;
+    }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex; justify-content: space-between;
+      color: rgba(255,255,255,0.3); font-size: 0.78rem; font-weight: 300;
+    }
+
+    /* WSP */
+    .wsp-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s; text-decoration: none;
+    }
+    .wsp-float:hover { transform: scale(1.1); }
+    .wsp-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .collections-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-step::after { display: none; }
+      .gallery-split { grid-template-columns: 1fr; }
+      .gallery-left { grid-template-columns: repeat(4, 1fr); grid-template-rows: 200px; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(10,10,10,0.98); padding: 24px; gap: 16px;
+      }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-img-2 { display: none; }
+      .collections-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .gallery-left { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .press-logos { gap: 30px; }
+      .press-logo { font-size: 1.3rem; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .insta-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Valentina</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#colecciones">Colecciones</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#prensa">Prensa</a></li>
+        <li><a href="#contacto" class="nav-cta">Agendar cita</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+      <div class="hero-line"></div>
+      <div class="hero-tag">Buenos Aires — Atelier de Diseño</div>
+      <h1>Donde la moda se convierte en <em>arte</em></h1>
+      <p>Alta costura, diseño a medida y colecciones exclusivas con identidad argentina. Cada pieza cuenta una historia.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn btn-gold">Agendar cita privada</a>
+        <a href="#colecciones" class="btn btn-outline-white">Ver colecciones</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="marquee-dot"></span> Alta Costura</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Prêt-à-Porter</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Diseño a Medida</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Novias</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Asesoramiento de Imagen</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Eventos Exclusivos</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Alta Costura</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Prêt-à-Porter</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Diseño a Medida</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Novias</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Asesoramiento de Imagen</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Eventos Exclusivos</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images" data-aos="fade-right" data-aos-duration="1000">
+          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80" alt="Diseñadora trabajando" class="about-img-1" />
+          <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?w=500&q=80" alt="Detalle de costura" class="about-img-2" />
+        </div>
+        <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+          <span class="section-tag">Sobre el Atelier</span>
+          <h2>Más de 15 años vistiendo <em>historias</em></h2>
+          <p>Atelier Valentina nació en 2011 con una premisa simple: crear piezas que trasciendan tendencias. Cada diseño combina técnicas artesanales de alta costura con una visión contemporánea de la moda argentina.</p>
+          <p>Trabajamos con textiles seleccionados de las mejores tejedurías nacionales e internacionales, y cada prenda pasa por un proceso de confección artesanal que garantiza un calce perfecto y una terminación impecable.</p>
+          <p>Nuestro showroom en Palermo es un espacio íntimo donde cada clienta recibe atención personalizada, porque creemos que vestirse bien es un acto de amor propio.</p>
+          <div class="about-signature">— Valentina Ruiz</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="section collections-bg" id="colecciones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Colecciones 2026</span>
+        <h2 class="section-title">Diseños que hablan por vos</h2>
+        <p class="section-desc">Tres líneas pensadas para diferentes momentos, con la misma identidad y nivel de detalle.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="collections-grid">
+        <div class="collection-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="collection-img">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80" alt="Colección Éclat" />
+            <div class="collection-overlay">
+              <h3>Éclat</h3>
+              <span>Otoño / Invierno 2026</span>
+            </div>
+          </div>
+          <div class="collection-info">
+            <h3>Éclat</h3>
+            <span>Otoño / Invierno 2026</span>
+          </div>
+        </div>
+        <div class="collection-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="collection-img">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700&q=80" alt="Colección Lumière" />
+            <div class="collection-overlay">
+              <h3>Lumière</h3>
+              <span>Primavera / Verano 2026</span>
+            </div>
+          </div>
+          <div class="collection-info">
+            <h3>Lumière</h3>
+            <span>Primavera / Verano 2026</span>
+          </div>
+        </div>
+        <div class="collection-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="collection-img">
+            <img src="https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=700&q=80" alt="Línea Novias" />
+            <div class="collection-overlay">
+              <h3>Novias</h3>
+              <span>Colección permanente</span>
+            </div>
+          </div>
+          <div class="collection-info">
+            <h3>Novias</h3>
+            <span>Colección permanente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Servicios</span>
+        <h2 class="section-title">Lo que hacemos por vos</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Alta Costura</h3>
+          <p>Piezas únicas confeccionadas a mano con los textiles más nobles. Cada vestido es una obra de arte irrepetible.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Diseño a Medida</h3>
+          <p>Creamos la prenda que soñás, adaptada a tu cuerpo, tu personalidad y tu momento. Desde la idea hasta el último detalle.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Vestidos de Novia</h3>
+          <p>Tu vestido de novia diseñado desde cero o personalizado sobre nuestros modelos. Incluimos todas las pruebas necesarias.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Asesoramiento de Imagen</h3>
+          <p>Consultoría de estilo personal, armado de looks y shopping assistance. Descubrí la mejor versión de tu guardarropas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeria">
+    <div class="gallery-split">
+      <div class="gallery-left">
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=500&q=80" alt="Backstage" data-aos="fade-up" />
+        <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?w=500&q=80" alt="Textiles" data-aos="fade-up" data-aos-delay="100" />
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Modelo" data-aos="fade-up" data-aos-delay="200" />
+        <img src="https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=500&q=80" alt="Detalle" data-aos="fade-up" data-aos-delay="300" />
+      </div>
+      <div class="gallery-right">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1000&q=80" alt="Pasarela" />
+        <div class="gallery-right-content">
+          <h2>Detrás de cada pieza hay un mundo</h2>
+          <p>Conocé nuestro proceso creativo, desde los bocetos iniciales hasta la prenda terminada en el atelier.</p>
+          <a href="#proceso" class="btn btn-outline-gold">Ver proceso</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process-bg" id="proceso">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--gold-light);">Nuestro proceso</span>
+        <h2 class="section-title">De la idea a la realidad</h2>
+        <p class="section-desc">Cuatro etapas donde tu visión se transforma en una pieza única.</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">01</div>
+          <h3>Consulta Inicial</h3>
+          <p>Nos reunimos en el atelier para conocer tu estilo, la ocasión y tus deseos. Escuchamos cada detalle.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="150">
+          <div class="step-number">02</div>
+          <h3>Diseño & Boceto</h3>
+          <p>Creamos bocetos y seleccionamos textiles. Definimos juntas cada aspecto del diseño.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">03</div>
+          <h3>Confección Artesanal</h3>
+          <p>Nuestras modistas dan vida a la prenda con técnicas de alta costura. Incluimos pruebas de fitting.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="450">
+          <div class="step-number">04</div>
+          <h3>Entrega</h3>
+          <p>Tu pieza terminada, perfecta en cada detalle. Incluimos cuidado textil y garantía de terminación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Ellas confían en nosotras</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="test-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="test-quote">"</div>
+          <p class="test-text">Valentina diseñó mi vestido de novia y fue la experiencia más linda del proceso de casarme. Cada prueba era emocionante. El vestido superó todos mis sueños.</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="" class="test-avatar" />
+            <div>
+              <div class="test-name">Sofía Martínez</div>
+              <div class="test-role">Novia — Enero 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="test-quote">"</div>
+          <p class="test-text">Me hizo un vestido para los Martín Fierro y no solo recibí halagos toda la noche, sino que fue lo más cómodo que usé en mi vida. Genialidad pura.</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="" class="test-avatar" />
+            <div>
+              <div class="test-name">Camila Rossi</div>
+              <div class="test-role">Actriz</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="test-quote">"</div>
+          <p class="test-text">Hace 5 años que soy clienta de Valentina. Sus piezas de prêt-à-porter son mi uniforme para el día a día profesional. Calidad impecable y diseño atemporal.</p>
+          <div class="test-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="" class="test-avatar" />
+            <div>
+              <div class="test-name">Mercedes López</div>
+              <div class="test-role">Empresaria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section class="section" id="prensa">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos mencionaron en</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="press-logos" data-aos="fade-up">
+        <span class="press-logo">VOGUE</span>
+        <span class="press-logo">ELLE</span>
+        <span class="press-logo">HARPER'S</span>
+        <span class="press-logo">OHLALÁ!</span>
+        <span class="press-logo">PARA TI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta-section">
+    <div class="insta-header">
+      <h2>Seguinos en Instagram</h2>
+      <a href="#">@ateliervalentina</a>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=400&q=80" alt="" />
+        <div class="insta-overlay"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left" data-aos="fade-right">
+          <span class="section-tag" style="text-align:left;">Contacto</span>
+          <h2>Agendá tu cita en el <em>atelier</em></h2>
+          <p>Cada consulta es privada y sin compromiso. Nos encanta conocer a nuestras clientas, escuchar sus ideas y crear juntas algo extraordinario.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div class="contact-item-text">
+                <strong>Showroom</strong>
+                <span>Honduras 4832, Palermo Soho — Buenos Aires</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg width="20" height="20" fill="#25D366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></div>
+              <div class="contact-item-text">
+                <strong>WhatsApp</strong>
+                <span><a href="https://wa.me/5491155XXXXXX?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20el%20atelier" target="_blank">+54 11 55XX-XXXX</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-item-text">
+                <strong>Email</strong>
+                <span>hola@ateliervalentina.com.ar</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+              <div class="contact-item-text">
+                <strong>Instagram</strong>
+                <span><a href="#">@ateliervalentina</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="contact-item-text">
+                <strong>Horario de atención</strong>
+                <span>Lunes a viernes 10:00 - 19:00 · Sábados con cita previa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form" data-aos="fade-left">
+          <h3>Agendá tu consulta</h3>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="tel" placeholder="+54 11 XXXX-XXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Servicio de interés</label>
+              <select required>
+                <option value="">Seleccioná un servicio</option>
+                <option>Alta Costura — Pieza única</option>
+                <option>Diseño a Medida — Evento especial</option>
+                <option>Vestido de Novia</option>
+                <option>Prêt-à-Porter — Colección actual</option>
+                <option>Asesoramiento de Imagen</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Contanos sobre tu proyecto</label>
+              <textarea placeholder="Describí la ocasión, el estilo que buscás, fechas importantes..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Solicitar cita</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-content" data-aos="fade-up">
+      <h2>Tu próxima pieza favorita <em>empieza acá</em></h2>
+      <p>Cada gran look comienza con una conversación. Agendá tu cita privada en el atelier.</p>
+      <a href="https://wa.me/5491155XXXXXX?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20el%20atelier" class="btn btn-gold" target="_blank">
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>VALENTINA</h3>
+          <p>Atelier de diseño de modas en Buenos Aires. Alta costura, diseño a medida y colecciones con identidad argentina desde 2011.</p>
+          <div class="footer-social">
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Colecciones</h4>
+          <a href="#">Éclat — O/I 2026</a>
+          <a href="#">Lumière — P/V 2026</a>
+          <a href="#">Novias</a>
+          <a href="#">Archivo</a>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <a href="#">Alta Costura</a>
+          <a href="#">Diseño a Medida</a>
+          <a href="#">Asesoramiento</a>
+          <a href="#">Vestidos de Novia</a>
+        </div>
+        <div class="footer-col">
+          <h4>Atelier</h4>
+          <a href="#">Sobre nosotras</a>
+          <a href="#">Prensa</a>
+          <a href="#">Contacto</a>
+          <a href="#">Términos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Atelier Valentina — Buenos Aires, Argentina</span>
+        <span>Diseño con alma argentina</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WSP -->
+  <a href="https://wa.me/5491155XXXXXX?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20el%20atelier" class="wsp-float" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, offset: 80 });
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.textContent = '¡CITA SOLICITADA!';
+      btn.style.background = '#4A7C59';
+      setTimeout(() => { btn.textContent = 'SOLICITAR CITA'; btn.style.background = ''; e.target.reset(); }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Landings — CU Digital</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0A0A0A;
+      --card: #141414;
+      --border: #222;
+      --text: #fff;
+      --text-dim: #888;
+      --accent: #C9A96E;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    .hero {
+      text-align: center; padding: 100px 24px 60px;
+    }
+    .hero-tag {
+      display: inline-block; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 400; margin-bottom: 16px;
+    }
+    .hero p { color: var(--text-dim); font-size: 1.05rem; font-weight: 300; max-width: 550px; margin: 0 auto; }
+
+    .grid {
+      max-width: 1100px; margin: 0 auto; padding: 40px 24px 100px;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+      transition: all 0.4s;
+      text-decoration: none; color: var(--text);
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(201,169,110,0.1); }
+    .card-img { height: 260px; overflow: hidden; position: relative; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .card:hover .card-img img { transform: scale(1.05); }
+    .card-badge {
+      position: absolute; top: 16px; left: 16px;
+      background: rgba(201,169,110,0.9); color: #0A0A0A;
+      padding: 4px 14px; border-radius: 50px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .card-info { padding: 28px; }
+    .card-type { font-size: 0.72rem; color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .card-title { font-family: 'DM Serif Display'; font-size: 1.5rem; margin-bottom: 8px; }
+    .card-desc { font-size: 0.88rem; color: var(--text-dim); font-weight: 300; line-height: 1.6; margin-bottom: 16px; }
+    .card-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .card-tag {
+      background: rgba(255,255,255,0.06); color: var(--text-dim);
+      padding: 4px 12px; border-radius: 50px;
+      font-size: 0.72rem; font-weight: 500;
+    }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--accent); font-weight: 600; font-size: 0.85rem;
+      margin-top: 16px; transition: gap 0.3s;
+    }
+    .card:hover .card-link { gap: 12px; }
+
+    .footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.78rem; border-top: 1px solid var(--border); }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .card-img { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-tag">Portafolio de landings</div>
+    <h1>Diseño web que convierte</h1>
+    <p>Landings profesionales, responsivas y optimizadas para SEO. Cada proyecto es único, cada detalle importa.</p>
+  </section>
+
+  <div class="grid">
+    <a href="refugio-andino/" class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&q=80" alt="Refugio Andino" />
+        <span class="card-badge">Turismo</span>
+      </div>
+      <div class="card-info">
+        <div class="card-type">Cabañas · Patagonia</div>
+        <h2 class="card-title">Refugio Andino</h2>
+        <p class="card-desc">Landing premium para complejo de cabañas en Villa La Angostura con reservas, galería, tarifas y mapa interactivo.</p>
+        <div class="card-tags">
+          <span class="card-tag">SEO</span>
+          <span class="card-tag">Responsive</span>
+          <span class="card-tag">WhatsApp</span>
+          <span class="card-tag">Schema.org</span>
+        </div>
+        <div class="card-link">Ver proyecto <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+    </a>
+
+    <a href="las-piedras/" class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=800&q=80" alt="Las Piedras" />
+        <span class="card-badge">Turismo</span>
+      </div>
+      <div class="card-info">
+        <div class="card-type">Cabañas · Sierras de Córdoba</div>
+        <h2 class="card-title">Cabañas Las Piedras</h2>
+        <p class="card-desc">Landing cálida para cabañas en La Cumbrecita con carrusel de propiedades, testimonios y actividades cercanas.</p>
+        <div class="card-tags">
+          <span class="card-tag">SEO</span>
+          <span class="card-tag">Responsive</span>
+          <span class="card-tag">Animaciones</span>
+          <span class="card-tag">Marquee</span>
+        </div>
+        <div class="card-link">Ver proyecto <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+    </a>
+
+    <a href="moda-atelier/" class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Atelier Valentina" />
+        <span class="card-badge">Moda</span>
+      </div>
+      <div class="card-info">
+        <div class="card-type">Diseño de modas · Alta costura</div>
+        <h2 class="card-title">Atelier Valentina</h2>
+        <p class="card-desc">Landing elegante para atelier de alta costura con colecciones, proceso creativo, feed de Instagram y citas online.</p>
+        <div class="card-tags">
+          <span class="card-tag">SEO</span>
+          <span class="card-tag">Responsive</span>
+          <span class="card-tag">Marquee</span>
+          <span class="card-tag">Lightbox</span>
+        </div>
+        <div class="card-link">Ver proyecto <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+    </a>
+
+    <a href="muebles-roble/" class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Roble Muebles" />
+        <span class="card-badge">E-commerce</span>
+      </div>
+      <div class="card-info">
+        <div class="card-type">Mueblería · Diseño de interiores</div>
+        <h2 class="card-title">Roble Muebles</h2>
+        <p class="card-desc">Landing para mueblería con catálogo por categoría, productos destacados, showroom y financiación integrada.</p>
+        <div class="card-tags">
+          <span class="card-tag">SEO</span>
+          <span class="card-tag">Responsive</span>
+          <span class="card-tag">Schema.org</span>
+          <span class="card-tag">Maps</span>
+        </div>
+        <div class="card-link">Ver proyecto <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+    </a>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 CU Digital — Landings profesionales que convierten
+  </footer>
+</body>
+</html>
