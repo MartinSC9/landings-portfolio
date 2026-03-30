@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Notes — Minimal Desktop Notes App</title>
+  <meta name="description" content="A fast, minimal sticky notes app for Windows and macOS. Organize your thoughts with colors, pins, search and dark mode. Free and open source." />
+  <meta name="keywords" content="sticky notes, desktop app, notes app, windows 11, macos, electron, free, open source, dark mode" />
+  <meta name="author" content="CU Digital" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#005fb8" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quick Notes — Minimal Desktop Notes App" />
+  <meta property="og:description" content="A fast, minimal sticky notes app for your desktop. Free and open source." />
+  <meta property="og:url" content="https://martinsc9.github.io/landings-portfolio/quick-notes/" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #005fb8;
+      --blue-light: #0078d4;
+      --blue-soft: #e8f0fe;
+      --blue-glow: rgba(0, 95, 184, .12);
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #999;
+      --border: #e5e5e5;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 4px rgba(0,0,0,.05);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.08);
+      --max-w: 1080px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(247,248,250,.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,.06); }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-icon svg { width: 16px; height: 16px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cta {
+      padding: 8px 18px;
+      background: var(--blue);
+      color: #fff !important;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background .2s, transform .1s;
+    }
+    .nav-cta:hover { background: var(--blue-light); transform: translateY(-1px); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 140px 24px 80px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg) 0%, #eef2f7 100%);
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--blue), #3ba0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .2s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .btn svg { width: 18px; height: 18px; }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,95,184,.25);
+    }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,95,184,.3); }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    /* App screenshot */
+    .hero-image {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(0,0,0,.04);
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(0,0,0,.06);
+      pointer-events: none;
+    }
+
+    /* ── Features ── */
+    .features {
+      padding: 100px 24px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .feature-icon svg { width: 22px; height: 22px; color: var(--blue); }
+
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── OS Styles section ── */
+    .os-section {
+      padding: 100px 24px;
+      background: linear-gradient(180deg, #eef2f7 0%, var(--bg) 100%);
+    }
+
+    .os-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .os-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .os-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .os-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+    .os-card-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 16px;
+      background: var(--blue-soft);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .os-card-icon svg { width: 28px; height: 28px; color: var(--blue); }
+
+    .os-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .os-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .os-card .os-tags {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .os-tag {
+      padding: 4px 10px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    /* ── Download / CTA ── */
+    .cta {
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 56px 40px;
+      background: linear-gradient(135deg, var(--blue), #3ba0ff);
+      border-radius: var(--radius-lg);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 800;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .cta-box p {
+      font-size: 16px;
+      opacity: .85;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--blue);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+    .btn-white svg { width: 18px; height: 18px; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .os-cards { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding: 120px 20px 60px; }
+      .features, .cta { padding: 60px 20px; }
+      .os-section { padding: 60px 20px; }
+      .cta-box { padding: 40px 24px; }
+      .footer-inner { flex-direction: column; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+            <line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="15" y2="12"/><line x1="7" y1="16" x2="12" y2="16"/>
+          </svg>
+        </div>
+        Quick Notes
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#styles">Styles</a></li>
+        <li><a href="#download" class="nav-cta">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge" data-aos="fade-down">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><circle cx="8" cy="8" r="4"/></svg>
+        Free &amp; Open Source
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Notes, but <span>faster</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">A minimal desktop app to capture your thoughts instantly. Native look on Windows 11 &amp; macOS, with dark mode.</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+        <a href="#download" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows
+        </a>
+        <a href="https://github.com/MartinSC9/QuickNotes" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <div class="hero-image" data-aos="zoom-in" data-aos-delay="400">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3Crect fill='%23f3f3f3' width='1280' height='720'/%3E%3C/svg%3E" alt="Quick Notes app screenshot" id="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="section-label" data-aos="fade-up">Features</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Everything you need,<br>nothing you don't</h2>
+    <p class="section-desc" data-aos="fade-up" data-aos-delay="100">No accounts, no cloud, no bloat. Just your notes, on your machine.</p>
+
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3>Visual Grid</h3>
+        <p>See all your notes at a glance. Color-coded cards with title, preview and date.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Instant Search</h3>
+        <p>Find any note instantly. Search across titles and content in real time.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L12 10M8 10H16L14.5 16H9.5L8 10ZM10 16L9 22M14 16L15 22"/></svg>
+        </div>
+        <h3>Pin Important</h3>
+        <p>Pin your most important notes to the top so they're always visible.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+        </div>
+        <h3>Dark &amp; Light Mode</h3>
+        <p>Switch between dark and light themes. Your preference is saved automatically.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        </div>
+        <h3>System Tray</h3>
+        <p>Runs quietly in your system tray. Always there when you need it, hidden when you don't.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </div>
+        <h3>100% Local</h3>
+        <p>Your notes stay on your machine. No cloud, no account, no tracking. Just files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OS Styles -->
+  <section class="os-section" id="styles">
+    <div class="os-inner">
+      <div class="section-label" data-aos="fade-up">Design</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Feels native on<br>every platform</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="100" style="margin: 0 auto 0;">Switch between Windows 11 and macOS styles with one click.</p>
+
+      <div class="os-cards">
+        <div class="os-card" data-aos="fade-right" data-aos-delay="150">
+          <div class="os-card-icon">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 3.2L6.6 2.5V7.4H1V3.2ZM7.4 2.4L14.4 1.2V7.4H7.4V2.4ZM1 8.1H6.6V13L1 12.3V8.1ZM7.4 8.1H14.4V14.4L7.4 13.1V8.1Z"/></svg>
+          </div>
+          <h3>Windows 11</h3>
+          <p>Fluent Design with Mica-style titlebar, native controls and system accent colors.</p>
+          <div class="os-tags">
+            <span class="os-tag">Fluent Design</span>
+            <span class="os-tag">Segoe UI</span>
+            <span class="os-tag">Mica</span>
+          </div>
+        </div>
+        <div class="os-card" data-aos="fade-left" data-aos-delay="150">
+          <div class="os-card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.7 6.3C17.6 4.8 16 4.3 14.5 4.3c-1.2 0-2 .5-2.5.5s-1.3-.5-2.3-.5C7.8 4.3 5.8 5.5 4.7 7.5c-2.2 4 .5 10 3.3 13.3 1 1.5 2.3 3.2 4 3.1 1.5-.1 2.1-.9 3.9-.9s2.3.9 3.9.9c1.7 0 2.8-1.5 3.8-3C24.3 19.6 24.7 18.5 24.8 18.1c-2.5-1-4.3-3.5-4.3-6.5 0-2.5 1.3-4.5 3.2-5.3zM16.8 1c-1.3.1-2.8.9-3.7 2-.8.9-1.4 2.3-1.2 3.6 1.4.1 2.7-.8 3.6-1.8.8-1 1.4-2.3 1.3-3.8z"/></svg>
+          </div>
+          <h3>macOS</h3>
+          <p>Traffic light buttons, centered title and SF Pro typography. Feels right at home.</p>
+          <div class="os-tags">
+            <span class="os-tag">Traffic Lights</span>
+            <span class="os-tag">SF Pro</span>
+            <span class="os-tag">Native feel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="download">
+    <div class="cta-box" data-aos="zoom-in">
+      <h2>Ready to take better notes?</h2>
+      <p>Download Quick Notes for free. No sign up, no ads, no telemetry.</p>
+      <a href="https://github.com/MartinSC9/QuickNotes/releases" target="_blank" rel="noopener noreferrer" class="btn-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for Windows
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>Built by <a href="https://cudigital.dev" target="_blank" rel="noopener noreferrer">CU Digital</a></p>
+      <p>Open source on <a href="https://github.com/MartinSC9/QuickNotes" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true, offset: 60 });
+
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Generate screenshot placeholder with canvas
+    (function() {
+      const img = document.getElementById('hero-img');
+      const c = document.createElement('canvas');
+      c.width = 1280; c.height = 720;
+      const ctx = c.getContext('2d');
+
+      function roundRect(x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x+r, y); ctx.lineTo(x+w-r, y); ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+        ctx.lineTo(x+w, y+h-r); ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+        ctx.lineTo(x+r, y+h); ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+        ctx.lineTo(x, y+r); ctx.quadraticCurveTo(x, y, x+r, y);
+        ctx.closePath();
+      }
+
+      // BG
+      ctx.fillStyle = '#e8ecf1';
+      ctx.fillRect(0, 0, 1280, 720);
+
+      // Window
+      const wx=40, wy=20, ww=1200, wh=680;
+      ctx.shadowColor = 'rgba(0,0,0,.12)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 6;
+      roundRect(wx, wy, ww, wh, 10); ctx.fillStyle = '#fff'; ctx.fill();
+      ctx.shadowColor = 'transparent';
+
+      // Titlebar
+      ctx.fillStyle = '#f8f8f8';
+      ctx.fillRect(wx, wy, ww, 36);
+      ctx.fillStyle = '#666'; ctx.font = '12px Inter, sans-serif';
+      ctx.fillText('Quick Notes', wx+16, wy+23);
+
+      // Controls
+      const cy = wy+18;
+      ctx.strokeStyle = '#999'; ctx.lineWidth = 1;
+      ['x','□','–'].forEach((s, i) => {
+        const cx2 = wx+ww-16-i*46;
+        if (s === 'x') { ctx.beginPath(); ctx.moveTo(cx2-4,cy-4); ctx.lineTo(cx2+4,cy+4); ctx.moveTo(cx2+4,cy-4); ctx.lineTo(cx2-4,cy+4); ctx.stroke(); }
+        if (s === '□') ctx.strokeRect(cx2-4, cy-4, 8, 8);
+        if (s === '–') { ctx.beginPath(); ctx.moveTo(cx2-5, cy); ctx.lineTo(cx2+5, cy); ctx.stroke(); }
+      });
+
+      // Search
+      roundRect(wx+16, wy+46, 400, 30, 6); ctx.fillStyle='#f3f3f3'; ctx.fill();
+      ctx.fillStyle='#aaa'; ctx.font='12px Inter'; ctx.fillText('🔍  Search notes...', wx+30, wy+64);
+
+      // New btn
+      roundRect(wx+ww-120, wy+46, 100, 30, 4); ctx.fillStyle='#005fb8'; ctx.fill();
+      ctx.fillStyle='#fff'; ctx.font='600 12px Inter'; ctx.textAlign='center';
+      ctx.fillText('+ New Note', wx+ww-70, wy+64); ctx.textAlign='left';
+
+      // Cards
+      const notes = [
+        {c:'#005fb8',t:'Meeting Notes',p:'Review Q2 targets with team.\nPrepare presentation slides.'},
+        {c:'#107c10',t:'Grocery List',p:'Milk, eggs, bread, avocados,\nchicken, rice, olive oil'},
+        {c:'#c24e00',t:'Project Ideas',p:'Weather app with AI insights\nRecipe manager with planning'},
+        {c:'#7160e8',t:'Book List',p:'Atomic Habits - James Clear\nDeep Work - Cal Newport'},
+        {c:'#0e8a7b',t:'Workout Plan',p:'Monday: Chest + Triceps\nWednesday: Back + Biceps'},
+        {c:'#d48c00',t:'Travel Checklist',p:'Passport ✓\nHotel booking ✓\nFlight tickets ✓'},
+      ];
+      const gx=wx+16, gy=wy+90, cw=(ww-64)/3, ch=140, gap=14;
+      notes.forEach((n,i) => {
+        const col=i%3, row=Math.floor(i/3);
+        const nx=gx+col*(cw+gap), ny=gy+row*(ch+gap);
+        ctx.shadowColor='rgba(0,0,0,.04)'; ctx.shadowBlur=6; ctx.shadowOffsetY=2;
+        roundRect(nx,ny,cw,ch,8); ctx.fillStyle='#fff'; ctx.fill();
+        ctx.shadowColor='transparent';
+        roundRect(nx,ny,cw,ch,8); ctx.strokeStyle='#e8e8e8'; ctx.lineWidth=1; ctx.stroke();
+        ctx.fillStyle=n.c; ctx.fillRect(nx+1,ny,cw-2,3);
+        ctx.font='600 13px Inter'; ctx.fillStyle='#1a1a1a'; ctx.fillText(n.t, nx+14, ny+26);
+        ctx.font='11px Inter'; ctx.fillStyle='#777';
+        n.p.split('\n').forEach((l,li) => ctx.fillText(l, nx+14, ny+46+li*16));
+        ctx.font='10px Inter'; ctx.fillStyle='#bbb'; ctx.fillText('Mar 2026', nx+14, ny+ch-12);
+      });
+
+      img.src = c.toDataURL();
+    })();
+  </script>
+</body>
+</html>
